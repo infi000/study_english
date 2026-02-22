@@ -1,63 +1,63 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+本文件为 Claude Code (claude.ai/code) 在此仓库中工作时提供指导。
 
-## Quick Commands
+## 快速命令
 
 ```bash
-# Development
-npm run dev              # Start dev server on port 3010
-npm run dev:stop        # Stop dev server
-npm run dev:restart     # Restart dev server
+# 开发
+npm run dev              # 在端口 3010 启动开发服务器
+npm run dev:stop        # 停止开发服务器
+npm run dev:restart     # 重启开发服务器
 
-# Production
-npm run build           # Build for production
-npm start              # Start production server on port 3010
+# 生产
+npm run build           # 构建生产版本
+npm start              # 在端口 3010 启动生产服务器
 
-# Code Quality
-npm run lint           # Run ESLint
+# 代码质量
+npm run lint           # 运行 ESLint
 
-# Scripts
-npm run video:convert  # Convert video to article (uses tsx scripts/video-to-article.ts)
+# 脚本
+npm run video:convert  # 将视频转换为文章（使用 tsx scripts/video-to-article.ts）
 ```
 
-## Architecture Overview
+## 架构概览
 
-### State Management (Zustand + localStorage)
+### 状态管理（Zustand + localStorage）
 
-The app uses two main Zustand stores with persistence middleware:
+应用使用两个主要的 Zustand stores，配合持久化中间件：
 
 1. **DataStore** (`lib/data-store.ts`)
-   - Loads 6 levels (A1, A2, B1, B2, C1, VIDEO) from `public/data/[level]/articles.json`
-   - Loads achievements from `public/data/A1/achievements.json`
-   - Provides methods: `getLevel()`, `getArticle()`, `getAchievement()`
-   - Avoids duplicate loads by checking if data already exists
+   - 从 `public/data/[level]/articles.json` 加载 6 个等级（A1, A2, B1, B2, C1, VIDEO）
+   - 从 `public/data/A1/achievements.json` 加载成就
+   - 提供方法：`getLevel()`、`getArticle()`、`getAchievement()`
+   - 通过检查数据是否已存在来避免重复加载
 
 2. **ProgressStore** (`lib/progress-store.ts`)
-   - Tracks user progress: current level, completed articles, streak, achievements
-   - Manages article unlock logic: first article auto-unlocked, subsequent articles require previous completion
-   - Provides methods: `completeArticle()`, `updateStreak()`, `isLevelUnlocked()`
-   - Persists to localStorage keys: `data-storage`, `progress-storage`
+   - 追踪用户进度：当前等级、已完成文章、连续学习天数、成就
+   - 管理文章解锁逻辑：第一篇文章自动解锁，后续文章需完成前一篇才能解锁
+   - 提供方法：`completeArticle()`、`updateStreak()`、`isLevelUnlocked()`
+   - 持久化到 localStorage 键：`data-storage`、`progress-storage`
 
-### Data Flow
+### 数据流
 
 ```
 public/data/[level]/articles.json
          ↓
-    DataStore (loads on app init)
+    DataStore（应用初始化时加载）
          ↓
-    HomeClient / LevelClient / ArticleClient (consume via hooks)
+    HomeClient / LevelClient / ArticleClient（通过 hooks 消费）
          ↓
-    ProgressStore (tracks completion)
+    ProgressStore（追踪完成状态）
          ↓
-    localStorage (persists state)
+    localStorage（持久化状态）
 ```
 
-### Page Structure
+### 页面结构
 
-- **`app/page.tsx`** + **`app/home-client.tsx`**: Home page with 6 level cards and stats
-- **`app/level/[level]/page.tsx`** + **`app/level/[level]/page.client.tsx`**: Level page showing articles with unlock status
-- **`app/article/[article]/page.tsx`** + **`app/article/[article]/page.client.tsx`**: Article page with 3 learning modes
+- **`app/page.tsx`** + **`app/home-client.tsx`**：首页，显示 6 个等级卡片和统计信息
+- **`app/level/[level]/page.tsx`** + **`app/level/[level]/page.client.tsx`**：等级页面，显示文章及解锁状态
+- **`app/article/[article]/page.tsx`** + **`app/article/[article]/page.client.tsx`**：文章页面，包含 3 种学习模式
 
 All pages use `generateStaticParams()` for static generation of 22 routes.
 
