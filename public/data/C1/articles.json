@@ -1,0 +1,25 @@
+{
+  "articles": [
+    {
+      "id": "c1-001",
+      "title": "The Philosophical Implications of Artificial Intelligence",
+      "english": "The emergence of sophisticated artificial intelligence systems has precipitated profound philosophical inquiries into the nature of consciousness, cognition, and human identity. As machines demonstrate increasingly sophisticated capabilities in pattern recognition and decision-making, we are compelled to reconsider fundamental assumptions about what constitutes intelligence and sentience. The epistemological ramifications extend beyond mere technological advancement; they challenge our understanding of human exceptionalism and necessitate a comprehensive reevaluation of ethical frameworks governing human-machine interaction.",
+      "chinese": "复杂人工智能系统的出现引发了关于意识、认知和人类身份本质的深刻哲学思考。随着机器在模式识别和决策制定中展现出越来越复杂的能力，我们被迫重新考虑关于什么构成智能和感知的基本假设。认识论的影响超越了单纯的技术进步；它们挑战了我们对人类例外性的理解，并需要对管理人机交互的伦理框架进行全面重新评估。",
+      "sentences": [
+        {
+          "id": "s1",
+          "english": "The emergence of sophisticated artificial intelligence systems has precipitated profound philosophical inquiries.",
+          "chinese": "复杂人工智能系统的出现引发了深刻的哲学思考。"
+        }
+      ],
+      "vocab": [
+        {
+          "word": "precipitated",
+          "pronunciation": "/prɪˈsɪpɪteɪtɪd/",
+          "meaning": "caused something to happen suddenly",
+          "example": "The scandal precipitated his resignation."
+        }
+      ]
+    }
+  ]
+}

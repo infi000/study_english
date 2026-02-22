@@ -1,0 +1,67 @@
+{
+  "articles": [
+    {
+      "id": "a1-001",
+      "title": "Hello World",
+      "english": "Hello, my name is John. I am from England. I like to read books and play football. Today is a beautiful day. The sun is shining and the birds are singing.",
+      "chinese": "你好，我叫约翰。我来自英国。我喜欢读书和踢足球。今天是美好的一天。阳光灿烂，鸟儿在唱歌。",
+      "sentences": [
+        {
+          "id": "s1",
+          "english": "Hello, my name is John.",
+          "chinese": "你好，我叫约翰。"
+        },
+        {
+          "id": "s2",
+          "english": "I am from England.",
+          "chinese": "我来自英国。"
+        },
+        {
+          "id": "s3",
+          "english": "I like to read books and play football.",
+          "chinese": "我喜欢读书和踢足球。"
+        }
+      ],
+      "vocab": [
+        {
+          "word": "beautiful",
+          "pronunciation": "/ˈbjuːtɪfl/",
+          "meaning": "pleasing to look at; attractive",
+          "example": "The sunset is beautiful."
+        },
+        {
+          "word": "shining",
+          "pronunciation": "/ˈʃaɪnɪŋ/",
+          "meaning": "emitting or reflecting light",
+          "example": "The sun is shining brightly."
+        }
+      ]
+    },
+    {
+      "id": "a1-002",
+      "title": "My Family",
+      "english": "I have a big family. My father is a doctor. My mother is a teacher. I have two brothers and one sister. We live in a small house near the park. Every weekend, we go to the park together.",
+      "chinese": "我有一个大家庭。我的父亲是医生。我的母亲是教师。我有两个哥哥和一个妹妹。我们住在公园附近的一所小房子里。每个周末，我们一起去公园。",
+      "sentences": [
+        {
+          "id": "s1",
+          "english": "I have a big family.",
+          "chinese": "我有一个大家庭。"
+        },
+        {
+          "id": "s2",
+          "english": "My father is a doctor.",
+          "chinese": "我的父亲是医生。"
+        }
+      ],
+      "vocab": [
+        {
+          "word": "family",
+          "pronunciation": "/ˈfæməli/",
+          "meaning": "parents and their children",
+          "example": "My family is very important to me."
+        }
+      ]
+    }
+  ]
+}

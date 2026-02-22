@@ -1,0 +1,25 @@
+{
+  "articles": [
+    {
+      "id": "a2-001",
+      "title": "Learning English",
+      "english": "Learning English is important in today's world. Many people study English to improve their career opportunities. There are different ways to learn English, such as taking classes, watching movies, or reading books. The most effective way is to practice regularly and speak with native speakers.",
+      "chinese": "在当今世界，学习英语很重要。许多人学习英语以改善他们的职业机会。有许多学习英语的方法，例如上课、看电影或读书。最有效的方法是定期练习并与母语使用者交谈。",
+      "sentences": [
+        {
+          "id": "s1",
+          "english": "Learning English is important in today's world.",
+          "chinese": "在当今世界，学习英语很重要。"
+        }
+      ],
+      "vocab": [
+        {
+          "word": "effective",
+          "pronunciation": "/ɪˈfektɪv/",
+          "meaning": "successful in producing a desired result",
+          "example": "This method is very effective for learning."
+        }
+      ]
+    }
+  ]
+}

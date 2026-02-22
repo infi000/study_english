@@ -1,0 +1,25 @@
+{
+  "articles": [
+    {
+      "id": "b1-001",
+      "title": "Technology and Society",
+      "english": "Technology has revolutionized the way we live and work. From smartphones to artificial intelligence, technological advancements have transformed nearly every aspect of our daily lives. However, this rapid development also brings challenges such as privacy concerns and digital addiction. Society must find a balance between embracing innovation and protecting our well-being.",
+      "chinese": "技术已经彻底改变了我们的生活和工作方式。从智能手机到人工智能，技术进步已经改变了我们日常生活的几乎每个方面。然而，这种快速发展也带来了隐私问题和数字成瘾等挑战。社会必须在拥抱创新和保护我们的福祉之间找到平衡。",
+      "sentences": [
+        {
+          "id": "s1",
+          "english": "Technology has revolutionized the way we live and work.",
+          "chinese": "技术已经彻底改变了我们的生活和工作方式。"
+        }
+      ],
+      "vocab": [
+        {
+          "word": "revolutionized",
+          "pronunciation": "/ˌrevəˈluːʃənaɪzd/",
+          "meaning": "completely changed something",
+          "example": "The internet revolutionized communication."
+        }
+      ]
+    }
+  ]
+}

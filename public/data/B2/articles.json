@@ -1,0 +1,25 @@
+{
+  "articles": [
+    {
+      "id": "b2-001",
+      "title": "Climate Change and Environmental Protection",
+      "english": "Climate change represents one of the most pressing challenges of our time. The accumulation of greenhouse gases in the atmosphere has led to unprecedented global warming, resulting in severe weather patterns, rising sea levels, and ecological disruption. Addressing this crisis requires comprehensive international cooperation, substantial investment in renewable energy, and fundamental changes in consumer behavior. While the situation is dire, emerging technologies and growing environmental consciousness offer hope for a sustainable future.",
+      "chinese": "气候变化是我们时代最紧迫的挑战之一。大气中温室气体的积累导致了前所未有的全球变暖，导致恶劣的天气模式、海平面上升和生态破坏。解决这一危机需要全面的国际合作、对可再生能源的大量投资以及消费者行为的根本改变。虽然形势严峻，但新兴技术和日益增长的环保意识为可持续的未来提供了希望。",
+      "sentences": [
+        {
+          "id": "s1",
+          "english": "Climate change represents one of the most pressing challenges of our time.",
+          "chinese": "气候变化是我们时代最紧迫的挑战之一。"
+        }
+      ],
+      "vocab": [
+        {
+          "word": "unprecedented",
+          "pronunciation": "/ʌnˈpresɪdentɪd/",
+          "meaning": "never done or known before",
+          "example": "The pandemic caused unprecedented economic disruption."
+        }
+      ]
+    }
+  ]
+}

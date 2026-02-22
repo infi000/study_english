@@ -1,0 +1,28 @@
+{
+  "achievements": [
+    {
+      "id": "first-article",
+      "name": "初出茅庐",
+      "description": "完成第一篇文章",
+      "icon": "🎯"
+    },
+    {
+      "id": "streak-7",
+      "name": "连续学习者",
+      "description": "连续学习 7 天",
+      "icon": "🔥"
+    },
+    {
+      "id": "level-up",
+      "name": "升级高手",
+      "description": "解锁第二个等级",
+      "icon": "⭐"
+    },
+    {
+      "id": "perfectionist",
+      "name": "完美主义者",
+      "description": "完成一次完美测试",
+      "icon": "💯"
+    }
+  ]
+}
