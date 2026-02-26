@@ -6,7 +6,9 @@ export async function generateStaticParams() {
     { level: 'A2' },
     { level: 'B1' },
     { level: 'B2' },
-    { level: 'C1' }
+    { level: 'C1' },
+    { level: 'VIDEO' },
+    { level: 'DON_KOE' }
   ]
 }
 

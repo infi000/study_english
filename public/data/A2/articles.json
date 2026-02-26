@@ -1,23 +1,76 @@
 {
   "articles": [
     {
-      "id": "a2-001",
+      "id": "a2-1",
       "title": "Learning English",
+      "description": "学习英语的重要性",
+      "descriptionEn": "The importance of learning English",
+      "difficulty": 2,
       "english": "Learning English is important in today's world. Many people study English to improve their career opportunities. There are different ways to learn English, such as taking classes, watching movies, or reading books. The most effective way is to practice regularly and speak with native speakers.",
       "chinese": "在当今世界，学习英语很重要。许多人学习英语以改善他们的职业机会。有许多学习英语的方法，例如上课、看电影或读书。最有效的方法是定期练习并与母语使用者交谈。",
       "sentences": [
         {
-          "id": "s1",
           "english": "Learning English is important in today's world.",
           "chinese": "在当今世界，学习英语很重要。"
+        },
+        {
+          "english": "Many people study English to improve their career opportunities.",
+          "chinese": "许多人学习英语以改善他们的职业机会。"
+        },
+        {
+          "english": "There are different ways to learn English.",
+          "chinese": "有许多学习英语的方法。"
         }
       ],
-      "vocab": [
+      "vocabulary": [
         {
           "word": "effective",
-          "pronunciation": "/ɪˈfektɪv/",
-          "meaning": "successful in producing a desired result",
-          "example": "This method is very effective for learning."
+          "translation": "有效的",
+          "phonetic": "/ɪˈfektɪv/",
+          "partOfSpeech": "形容词"
+        },
+        {
+          "word": "opportunity",
+          "translation": "机会",
+          "phonetic": "/ˌɒpərˈtjuːnɪti/",
+          "partOfSpeech": "名词"
+        }
+      ]
+    },
+    {
+      "id": "a2-2",
+      "title": "Travel Adventures",
+      "description": "旅行冒险故事",
+      "descriptionEn": "Travel adventure stories",
+      "difficulty": 2,
+      "english": "Last summer, I traveled to France. It was an amazing experience. I visited Paris, the capital city, and saw the Eiffel Tower. The food was delicious and the people were friendly. I also took a train to the countryside and enjoyed the beautiful landscapes. This trip changed my perspective on life.",
+      "chinese": "去年夏天，我去了法国旅行。这是一次令人惊奇的经历。我访问了首都巴黎，看到了埃菲尔铁塔。食物很美味，人们很友好。我还乘火车去了乡村，欣赏了美丽的风景。这次旅行改变了我对生活的看法。",
+      "sentences": [
+        {
+          "english": "Last summer, I traveled to France.",
+          "chinese": "去年夏天，我去了法国旅行。"
+        },
+        {
+          "english": "It was an amazing experience.",
+          "chinese": "这是一次令人惊奇的经历。"
+        },
+        {
+          "english": "I visited Paris and saw the Eiffel Tower.",
+          "chinese": "我访问了巴黎，看到了埃菲尔铁塔。"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "amazing",
+          "translation": "令人惊奇的",
+          "phonetic": "/əˈmeɪzɪŋ/",
+          "partOfSpeech": "形容词"
+        },
+        {
+          "word": "landscape",
+          "translation": "风景",
+          "phonetic": "/ˈlændskeɪp/",
+          "partOfSpeech": "名词"
         }
       ]
     }

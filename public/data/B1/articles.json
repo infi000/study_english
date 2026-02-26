@@ -1,23 +1,78 @@
 {
   "articles": [
     {
-      "id": "b1-001",
+      "id": "b1-1",
       "title": "Technology and Society",
+      "description": "科技如何改变社会",
+      "descriptionEn": "How technology transforms society",
+      "difficulty": 2,
       "english": "Technology has revolutionized the way we live and work. From smartphones to artificial intelligence, technological advancements have transformed nearly every aspect of our daily lives. However, this rapid development also brings challenges such as privacy concerns and digital addiction. Society must find a balance between embracing innovation and protecting our well-being.",
       "chinese": "技术已经彻底改变了我们的生活和工作方式。从智能手机到人工智能，技术进步已经改变了我们日常生活的几乎每个方面。然而，这种快速发展也带来了隐私问题和数字成瘾等挑战。社会必须在拥抱创新和保护我们的福祉之间找到平衡。",
       "sentences": [
         {
-          "id": "s1",
           "english": "Technology has revolutionized the way we live and work.",
           "chinese": "技术已经彻底改变了我们的生活和工作方式。"
+        },
+        {
+          "english": "From smartphones to artificial intelligence, technological advancements have transformed nearly every aspect of our daily lives.",
+          "chinese": "从智能手机到人工智能，技术进步已经改变了我们日常生活的几乎每个方面。"
+        },
+        {
+          "english": "However, this rapid development also brings challenges such as privacy concerns and digital addiction.",
+          "chinese": "然而，这种快速发展也带来了隐私问题和数字成瘾等挑战。"
         }
       ],
-      "vocab": [
+      "vocabulary": [
         {
           "word": "revolutionized",
-          "pronunciation": "/ˌrevəˈluːʃənaɪzd/",
-          "meaning": "completely changed something",
-          "example": "The internet revolutionized communication."
+          "translation": "彻底改变",
+          "phonetic": "/ˌrevəˈluːʃənaɪzd/",
+          "partOfSpeech": "动词"
+        },
+        {
+          "word": "advancements",
+          "translation": "进步",
+          "phonetic": "/ədˈvɑːnsments/",
+          "partOfSpeech": "名词"
+        },
+        {
+          "word": "privacy",
+          "translation": "隐私",
+          "phonetic": "/ˈprɪvəsi/",
+          "partOfSpeech": "名词"
+        }
+      ]
+    },
+    {
+      "id": "b1-2",
+      "title": "Environmental Conservation",
+      "description": "环境保护的重要性",
+      "descriptionEn": "The importance of environmental protection",
+      "difficulty": 2,
+      "english": "Environmental conservation is crucial for the survival of our planet. Deforestation, pollution, and climate change are threatening ecosystems worldwide. We must take immediate action to reduce carbon emissions, protect endangered species, and promote sustainable practices. Every individual can contribute by making conscious choices in their daily lives.",
+      "chinese": "环境保护对我们星球的生存至关重要。森林砍伐、污染和气候变化正在威胁全球生态系统。我们必须立即采取行动减少碳排放、保护濒危物种并推广可持续实践。每个人都可以通过在日常生活中做出有意识的选择来做出贡献。",
+      "sentences": [
+        {
+          "english": "Environmental conservation is crucial for the survival of our planet.",
+          "chinese": "环境保护对我们星球的生存至关重要。"
+        },
+        {
+          "english": "Deforestation, pollution, and climate change are threatening ecosystems worldwide.",
+          "chinese": "森林砍伐、污染和气候变化正在威胁全球生态系统。"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "conservation",
+          "translation": "保护",
+          "phonetic": "/ˌkɒnsərˈveɪʃn/",
+          "partOfSpeech": "名词"
+        },
+        {
+          "word": "deforestation",
+          "translation": "森林砍伐",
+          "phonetic": "/ˌdiːfɒrɪˈsteɪʃn/",
+          "partOfSpeech": "名词"
         }
       ]
     }

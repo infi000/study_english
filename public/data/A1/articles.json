@@ -1,65 +1,206 @@
 {
   "articles": [
     {
-      "id": "a1-001",
+      "id": "a1-1",
       "title": "Hello World",
+      "description": "基础自我介绍",
+      "descriptionEn": "Basic self-introduction",
+      "difficulty": 1,
       "english": "Hello, my name is John. I am from England. I like to read books and play football. Today is a beautiful day. The sun is shining and the birds are singing.",
       "chinese": "你好，我叫约翰。我来自英国。我喜欢读书和踢足球。今天是美好的一天。阳光灿烂，鸟儿在唱歌。",
       "sentences": [
         {
-          "id": "s1",
           "english": "Hello, my name is John.",
           "chinese": "你好，我叫约翰。"
         },
         {
-          "id": "s2",
           "english": "I am from England.",
           "chinese": "我来自英国。"
         },
         {
-          "id": "s3",
           "english": "I like to read books and play football.",
           "chinese": "我喜欢读书和踢足球。"
+        },
+        {
+          "english": "Today is a beautiful day.",
+          "chinese": "今天是美好的一天。"
+        },
+        {
+          "english": "The sun is shining and the birds are singing.",
+          "chinese": "阳光灿烂，鸟儿在唱歌。"
         }
       ],
-      "vocab": [
+      "vocabulary": [
         {
           "word": "beautiful",
-          "pronunciation": "/ˈbjuːtɪfl/",
-          "meaning": "pleasing to look at; attractive",
-          "example": "The sunset is beautiful."
+          "translation": "美丽的",
+          "phonetic": "/ˈbjuːtɪfl/",
+          "partOfSpeech": "形容词"
         },
         {
           "word": "shining",
-          "pronunciation": "/ˈʃaɪnɪŋ/",
-          "meaning": "emitting or reflecting light",
-          "example": "The sun is shining brightly."
+          "translation": "闪闪发光的",
+          "phonetic": "/ˈʃaɪnɪŋ/",
+          "partOfSpeech": "形容词"
+        },
+        {
+          "word": "singing",
+          "translation": "唱歌",
+          "phonetic": "/ˈsɪŋɪŋ/",
+          "partOfSpeech": "动词"
         }
       ]
     },
     {
-      "id": "a1-002",
+      "id": "a1-2",
       "title": "My Family",
+      "description": "介绍家庭成员",
+      "descriptionEn": "Introducing family members",
+      "difficulty": 1,
       "english": "I have a big family. My father is a doctor. My mother is a teacher. I have two brothers and one sister. We live in a small house near the park. Every weekend, we go to the park together.",
       "chinese": "我有一个大家庭。我的父亲是医生。我的母亲是教师。我有两个哥哥和一个妹妹。我们住在公园附近的一所小房子里。每个周末，我们一起去公园。",
       "sentences": [
         {
-          "id": "s1",
           "english": "I have a big family.",
           "chinese": "我有一个大家庭。"
         },
         {
-          "id": "s2",
           "english": "My father is a doctor.",
           "chinese": "我的父亲是医生。"
+        },
+        {
+          "english": "My mother is a teacher.",
+          "chinese": "我的母亲是教师。"
+        },
+        {
+          "english": "I have two brothers and one sister.",
+          "chinese": "我有两个哥哥和一个妹妹。"
+        },
+        {
+          "english": "We live in a small house near the park.",
+          "chinese": "我们住在公园附近的一所小房子里。"
         }
       ],
-      "vocab": [
+      "vocabulary": [
         {
           "word": "family",
-          "pronunciation": "/ˈfæməli/",
-          "meaning": "parents and their children",
-          "example": "My family is very important to me."
+          "translation": "家庭",
+          "phonetic": "/ˈfæməli/",
+          "partOfSpeech": "名词"
+        },
+        {
+          "word": "doctor",
+          "translation": "医生",
+          "phonetic": "/ˈdɒktə/",
+          "partOfSpeech": "名词"
+        },
+        {
+          "word": "teacher",
+          "translation": "教师",
+          "phonetic": "/ˈtiːtʃə/",
+          "partOfSpeech": "名词"
+        }
+      ]
+    },
+    {
+      "id": "a1-3",
+      "title": "My School",
+      "description": "描述学校生活",
+      "descriptionEn": "Describing school life",
+      "difficulty": 1,
+      "english": "I go to school every day. My school is big and beautiful. I have many friends at school. We study English, Math, and Science. I like my English class the most. My teacher is very kind and patient.",
+      "chinese": "我每天都去上学。我的学校又大又漂亮。我在学校有很多朋友。我们学习英语、数学和科学。我最喜欢英语课。我的老师非常友善和耐心。",
+      "sentences": [
+        {
+          "english": "I go to school every day.",
+          "chinese": "我每天都去上学。"
+        },
+        {
+          "english": "My school is big and beautiful.",
+          "chinese": "我的学校又大又漂亮。"
+        },
+        {
+          "english": "I have many friends at school.",
+          "chinese": "我在学校有很多朋友。"
+        },
+        {
+          "english": "We study English, Math, and Science.",
+          "chinese": "我们学习英语、数学和科学。"
+        },
+        {
+          "english": "I like my English class the most.",
+          "chinese": "我最喜欢英语课。"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "school",
+          "translation": "学校",
+          "phonetic": "/skuːl/",
+          "partOfSpeech": "名词"
+        },
+        {
+          "word": "friend",
+          "translation": "朋友",
+          "phonetic": "/frend/",
+          "partOfSpeech": "名词"
+        },
+        {
+          "word": "patient",
+          "translation": "耐心的",
+          "phonetic": "/ˈpeɪʃnt/",
+          "partOfSpeech": "形容词"
+        }
+      ]
+    },
+    {
+      "id": "a1-4",
+      "title": "My Hobbies",
+      "description": "分享个人爱好",
+      "descriptionEn": "Sharing personal hobbies",
+      "difficulty": 1,
+      "english": "I have many hobbies. I like playing basketball and swimming. I also enjoy reading books and watching movies. On weekends, I usually go to the gym or play with my friends. My favorite hobby is playing the guitar.",
+      "chinese": "我有很多爱好。我喜欢打篮球和游泳。我也喜欢读书和看电影。在周末，我通常去健身房或和朋友一起玩。我最喜欢的爱好是弹吉他。",
+      "sentences": [
+        {
+          "english": "I have many hobbies.",
+          "chinese": "我有很多爱好。"
+        },
+        {
+          "english": "I like playing basketball and swimming.",
+          "chinese": "我喜欢打篮球和游泳。"
+        },
+        {
+          "english": "I also enjoy reading books and watching movies.",
+          "chinese": "我也喜欢读书和看电影。"
+        },
+        {
+          "english": "On weekends, I usually go to the gym or play with my friends.",
+          "chinese": "在周末，我通常去健身房或和朋友一起玩。"
+        },
+        {
+          "english": "My favorite hobby is playing the guitar.",
+          "chinese": "我最喜欢的爱好是弹吉他。"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "hobby",
+          "translation": "爱好",
+          "phonetic": "/ˈhɒbi/",
+          "partOfSpeech": "名词"
+        },
+        {
+          "word": "basketball",
+          "translation": "篮球",
+          "phonetic": "/ˈbɑːskɪtbɔːl/",
+          "partOfSpeech": "名词"
+        },
+        {
+          "word": "swimming",
+          "translation": "游泳",
+          "phonetic": "/ˈswɪmɪŋ/",
+          "partOfSpeech": "名词"
         }
       ]
     }

@@ -122,8 +122,8 @@ export const useProgressStore = create<ProgressState>()(
       },
 
       isLevelUnlocked: (levelId: string) => {
-        // VIDEO 等级始终解锁
-        if (levelId === 'VIDEO') {
+        // VIDEO 和 DON_KOE 等级始终解锁
+        if (levelId === 'VIDEO' || levelId === 'DON_KOE') {
           return true
         }
         return get().unlockedLevels.includes(levelId)

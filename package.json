@@ -9,15 +9,21 @@
     "build": "next build",
     "start": "next start -p 3010",
     "lint": "next lint",
-    "video:convert": "tsx scripts/video-to-article.ts"
+    "video:convert": "tsx scripts/video-to-article.ts",
+    "dan-koe:import": "tsx scripts/integrate-dan-koe.ts",
+    "dan-koe:test": "tsx scripts/test-fetch-dan-koe.ts"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.11",
+    "@radix-ui/react-dialog": "^1.1.15",
     "@radix-ui/react-progress": "^1.1.8",
     "@radix-ui/react-separator": "^1.1.8",
     "@radix-ui/react-slot": "^1.2.4",
+    "axios": "^1.7.0",
+    "cheerio": "^1.0.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "dotenv": "^17.3.1",
     "lucide-react": "^0.454.0",
     "next": "^15.0.0",
     "react": "^19.0.0",
@@ -35,6 +41,8 @@
     "eslint-config-next": "^15.0.0",
     "openai": "^4.52.0",
     "postcss": "^8.4.0",
+    "shadcn": "^3.8.5",
+    "shadcn-ui": "^0.9.5",
     "tailwindcss": "^3.4.0",
     "tsx": "^4.7.0",
     "typescript": "^5.6.0"

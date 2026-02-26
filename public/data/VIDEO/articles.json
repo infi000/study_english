@@ -1,3 +1,715 @@
 {
-  "articles": []
+  "articles": [
+    {
+      "id": "video-1",
+      "title": "English Learning Tips",
+      "description": "英语学习技巧",
+      "descriptionEn": "Practical English learning techniques",
+      "difficulty": 2,
+      "english": "Learning English effectively requires consistent practice and exposure to the language. Watching English videos with subtitles is an excellent way to improve listening skills and vocabulary. Try to speak aloud, even if you are alone, to build confidence and improve pronunciation. Remember that making mistakes is part of the learning process, so do not be afraid to practice.",
+      "chinese": "有效学习英语需要持续练习和接触语言。观看带字幕的英文视频是提高听力和词汇的绝佳方式。尝试大声说话，即使你独自一人，也能建立信心并改进发音。记住犯错是学习过程的一部分，所以不要害怕练习。",
+      "sentences": [
+        {
+          "english": "Learning English effectively requires consistent practice and exposure to the language.",
+          "chinese": "有效学习英语需要持续练习和接触语言。"
+        },
+        {
+          "english": "Watching English videos with subtitles is an excellent way to improve listening skills.",
+          "chinese": "观看带字幕的英文视频是提高听力的绝佳方式。"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "consistent",
+          "translation": "一致的，持续的",
+          "phonetic": "/kənˈsɪstənt/",
+          "partOfSpeech": "形容词"
+        },
+        {
+          "word": "exposure",
+          "translation": "接触",
+          "phonetic": "/ɪkˈspoʊʒər/",
+          "partOfSpeech": "名词"
+        }
+      ]
+    },
+    {
+      "id": "video-BV1eBkYB9EQJ",
+      "title": "How to Master Any Skill in Two Weeks — Dan Koe",
+      "description": "Do you think mastering a new skill takes years? Think again — it can take just two weeks. This video dismantles traditional 'academic-style' learning and reveals how 'Technique Stacking' and 'Tactical Stress' accelerate real-world competence. You'll learn to strip away irrelevant theory, jump straight into high-leverage practice, and rapidly internalize core skills — whether playing guitar, using Photoshop, or building income-generating systems — all while reducing procrastination and anxiety.",
+      "descriptionEn": "Master any skill in just two weeks through technique stacking and tactical stress",
+      "difficulty": 4,
+      "english": "Most people believe mastering a skill requires years of slow, linear progress — but that’s a myth rooted in outdated education models. In reality, deep competence emerges not from passive consumption, but from rapid, targeted action under intelligent pressure. The key is Technique Stacking: combining 2–3 high-impact micro-methods (like deliberate practice + immediate feedback + time-boxed iteration) into one seamless workflow. Equally vital is Tactical Stress — intentionally designing short, safe challenges that activate your nervous system just enough to boost focus, memory encoding, and neuroplasticity — without triggering shutdown or burnout. Forget 'learning everything first.' Instead, identify the 20% of actions that generate 80% of results — the 'core loop' of your skill — and rehearse it relentlessly for 90 minutes daily. Within days, you’ll notice sharper pattern recognition; by Day 10, you’ll execute with surprising fluency. This isn’t about perfection — it’s about functional mastery: the ability to solve real problems, adapt on the fly, and build momentum through visible wins. Your goal isn’t to become an expert — it’s to become *unstuck*, confident, and capable enough to keep leveling up — starting now.",
+      "chinese": "大多数人认为掌握一项技能需要数年缓慢、线性的积累——但这其实是一个源于过时教育模式的迷思。事实上，真正的精通并非来自被动吸收知识，而是源于在智能压力下开展快速、精准的行动。核心方法是‘技术堆叠（Technique Stacking）’：将两到三种高影响力微策略（例如刻意练习 + 即时反馈 + 时间限定式迭代）整合成一个无缝衔接的工作流。同样关键的是‘战术性压力（Tactical Stress）’——有意识地设计短时、安全的挑战，让神经系统适度激活，从而提升专注力、记忆编码效率和神经可塑性，又不会引发崩溃或倦怠。请彻底抛弃‘先学完所有基础知识’的旧思维。转而识别出能带来80%成果的那20%关键动作——即你所学技能的‘核心循环’，并每天雷打不动地高强度演练90分钟。几天后，你会明显感知到模式识别能力增强；到第10天，你已能以令人惊讶的流畅度执行任务。这并非追求完美，而是追求‘功能性精通’：即解决真实问题、随机应变、并通过一个个可见的进步持续积累势能的能力。你的目标不是成为专家，而是摆脱停滞、建立信心、获得足以支撑你持续进阶的实操能力——就从现在开始。",
+      "sentences": [
+        {
+          "english": "Most people believe mastering a skill requires years of slow, linear progress — but that’s a myth rooted in outdated education models.",
+          "chinese": "大多数人认为掌握一项技能需要数年缓慢、线性的积累——但这其实是一个源于过时教育模式的迷思。"
+        },
+        {
+          "english": "Deep competence emerges not from passive consumption, but from rapid, targeted action under intelligent pressure.",
+          "chinese": "真正的精通并非来自被动吸收知识，而是源于在智能压力下开展快速、精准的行动。"
+        },
+        {
+          "english": "Technique Stacking means combining 2–3 high-impact micro-methods into one seamless workflow.",
+          "chinese": "技术堆叠意味着将两到三种高影响力微策略整合成一个无缝衔接的工作流。"
+        },
+        {
+          "english": "Deliberate practice, immediate feedback, and time-boxed iteration are examples of powerful micro-methods.",
+          "chinese": "刻意练习、即时反馈和时间限定式迭代，都是强有力的微策略范例。"
+        },
+        {
+          "english": "Tactical Stress is about designing short, safe challenges that boost focus and memory — without causing burnout.",
+          "chinese": "战术性压力在于设计短时、安全的挑战，以提升专注力与记忆力——同时避免导致倦怠。"
+        },
+        {
+          "english": "Forget 'learning everything first.' Instead, identify the 20% of actions that generate 80% of results.",
+          "chinese": "请彻底抛弃‘先学完所有基础知识’的旧思维。转而识别出能带来80%成果的那20%关键动作。"
+        },
+        {
+          "english": "That 20% is called the 'core loop' — the smallest repeatable sequence that delivers real value.",
+          "chinese": "这20%被称为‘核心循环’——即能持续产生真实价值的最小可复现动作序列。"
+        },
+        {
+          "english": "Rehearse this core loop relentlessly for 90 minutes daily — not longer, not less.",
+          "chinese": "每天雷打不动地高强度演练这一核心循环90分钟——不多也不少。"
+        },
+        {
+          "english": "Within days, you’ll notice sharper pattern recognition and faster decision-making.",
+          "chinese": "几天后，你会明显感知到模式识别更敏锐、决策速度更快。"
+        },
+        {
+          "english": "By Day 10, you’ll execute with surprising fluency — not because you’re perfect, but because you’ve built reliable neural pathways.",
+          "chinese": "到第10天，你已能以令人惊讶的流畅度执行任务——并非因为你已臻完美，而是因为你已建立起可靠的神经通路。"
+        },
+        {
+          "english": "Functional mastery means solving real problems, adapting on the fly, and building confidence through visible wins.",
+          "chinese": "功能性精通意味着解决真实问题、随机应变，并通过一个个可见的进步建立信心。"
+        },
+        {
+          "english": "Your goal isn’t to become an expert — it’s to become *unstuck*, confident, and capable enough to keep leveling up.",
+          "chinese": "你的目标不是成为专家，而是摆脱停滞、建立信心、获得足以支撑你持续进阶的实操能力。"
+        },
+        {
+          "english": "This approach works for guitar, Photoshop, coding, public speaking — even launching a side income stream.",
+          "chinese": "这一方法适用于吉他、Photoshop、编程、公众演讲——甚至启动副业收入流。"
+        },
+        {
+          "english": "The biggest barrier isn’t lack of time — it’s unclear priorities and unstructured practice.",
+          "chinese": "最大的障碍并非时间不足，而是目标模糊和练习缺乏结构。"
+        },
+        {
+          "english": "Strip away irrelevant theory. Jump straight into high-leverage practice.",
+          "chinese": "剥离无用的理论，直接进入高杠杆率的实践。"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "master",
+          "translation": "掌握；精通",
+          "phonetic": "/ˈmæs.tər/",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "myth",
+          "translation": "谬见；错误观念",
+          "phonetic": "/mɪθ/",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "outdated",
+          "translation": "过时的；陈旧的",
+          "phonetic": "/ˌaʊtˈdeɪ.tɪd/",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "competence",
+          "translation": "能力；胜任力",
+          "phonetic": "/ˈkɒm.pə.təns/",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "passive",
+          "translation": "被动的",
+          "phonetic": "/ˈpæs.ɪv/",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "consumption",
+          "translation": "吸收；摄取（此处指知识吸收）",
+          "phonetic": "/kənˈsʌmp.ʃən/",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "targeted",
+          "translation": "有针对性的",
+          "phonetic": "/ˈtɑːr.ɡɪ.tɪd/",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "intelligent",
+          "translation": "明智的；有策略的",
+          "phonetic": "/ɪnˈtel.ɪ.dʒənt/",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "stacking",
+          "translation": "堆叠；组合（此处指方法叠加）",
+          "phonetic": "/ˈstæk.ɪŋ/",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "micro-method",
+          "translation": "微策略；微型方法",
+          "phonetic": "/ˈmaɪ.kroʊ ˈmeθ.əd/",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "deliberate",
+          "translation": "刻意的；深思熟虑的",
+          "phonetic": "/dɪˈlɪb.ər.ət/",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "iteration",
+          "translation": "迭代；反复循环",
+          "phonetic": "/ˌɪt.əˈreɪ.ʃən/",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "tactical",
+          "translation": "战术性的；策略性的",
+          "phonetic": "/ˈtæk.tɪ.kəl/",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "burnout",
+          "translation": "倦怠；精疲力竭",
+          "phonetic": "/ˈbɜːn.aʊt/",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "leverage",
+          "translation": "杠杆作用；高效优势",
+          "phonetic": "/ˈliː.vər.ɪdʒ/",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "functional",
+          "translation": "功能性的；实用的",
+          "phonetic": "/ˈfʌŋk.ʃən.əl/",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "fluency",
+          "translation": "流利度；熟练度",
+          "phonetic": "/ˈfluː.ən.si/",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "neural pathway",
+          "translation": "神经通路",
+          "phonetic": "/ˈnʊə.rəl ˈpæθ.weɪ/",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "unstuck",
+          "translation": "摆脱停滞的；突破瓶颈的",
+          "phonetic": "/ʌnˈstʌk/",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "level up",
+          "translation": "升级；进阶",
+          "phonetic": "/ˈlev.əl ʌp/",
+          "partOfSpeech": "phrasal verb"
+        },
+        {
+          "word": "priority",
+          "translation": "优先事项；重点",
+          "phonetic": "/praɪˈɒr.ə.ti/",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "structured",
+          "translation": "有结构的；有条理的",
+          "phonetic": "/ˈstrʌk.tʃəd/",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "rehearse",
+          "translation": "反复演练；排练",
+          "phonetic": "/rɪˈhɜːs/",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "pattern recognition",
+          "translation": "模式识别",
+          "phonetic": "/ˈpæt.ən ˌrek.əɡˈnɪʃ.ən/",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "neuroplasticity",
+          "translation": "神经可塑性",
+          "phonetic": "/ˌnjʊə.rəʊ plæsˈtɪs.ə.ti/",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "audioPath": "/audio/BV1eBkYB9EQJ.m4a"
+    },
+    {
+      "id": "video-BV1RQvDBpEtc",
+      "title": "Everything Will Change in 2026 (Master These Skills) — Dan Koe [Bilingual]",
+      "description": "Does the world feel different lately? This isn't just AI hype—it's an ongoing exponential divergence. Dan Koe breaks down how three mindsets—'Resisters,' 'Waiters,' and 'Curious Ones'—will experience radically different fates amid this technological shift. The video redefines what a 'skill' really means and delivers three immediately actionable steps to build an irreplaceable personal moat by 2026—using 'liberating skills' and AI as leverage. You'll walk away with a complete survival toolkit: from mindset shifts to concrete daily practices—no more anxiety about being replaced.",
+      "descriptionEn": "Navigate exponential change: develop liberating skills and build your personal moat in 2026",
+      "difficulty": 4,
+      "english": "The world isn’t just changing—it’s diverging exponentially. What feels like noise today will be the foundation of tomorrow’s economy. Most people respond to AI disruption in one of three ways: they resist it, they wait for clarity, or they approach it with genuine curiosity. Resisters cling to outdated workflows and reject tools that could multiply their output. Waiters delay action, hoping for 'the right moment'—but in exponential change, delay equals obsolescence. Curious Ones ask questions first: 'How can this amplify my unique human strengths?' They treat AI not as a replacement, but as a lever. The most valuable skills aren’t technical—they’re liberating: skills that free your time, deepen your judgment, and strengthen your ability to connect, create meaning, and lead with authenticity. Examples include strategic storytelling, empathetic client synthesis, and systems-level thinking—not coding or prompt engineering alone. Your personal moat isn’t built by knowing more than others; it’s built by integrating knowledge, values, and execution in ways machines cannot replicate. Start now—not with perfection, but with iteration: pick one high-leverage skill, apply AI to remove friction, and ship something real every week. In 2026, the gap won’t be between those who use AI and those who don’t—it’ll be between those who design their future with intention, and those who inherit someone else’s default.",
+      "chinese": "世界不仅在变化——它正以指数级速度分化。今天看似嘈杂的信号，将成为明日经济的基石。面对AI带来的颠覆，大多数人只会采取三种反应之一：抗拒、等待，或保持好奇。抗拒者固守过时的工作流程，拒绝能大幅提升产出的工具；等待者拖延行动，总在等待‘合适的时机’——但在指数级变革中，拖延即意味着被淘汰；而好奇者则率先发问：‘如何用它放大我独有的人类优势？’他们把AI视为杠杆，而非替代品。真正最有价值的技能并非技术性技能，而是‘解放型技能’：它们能解放你的时间、深化你的判断力，并强化你联结他人、创造意义与真实领导的能力。例如战略叙事能力、共情式客户需求整合能力、系统性思维——而非仅限于编程或提示词工程。你的个人护城河，不在于比别人知道得更多，而在于以机器无法复制的方式，将知识、价值观与执行力融为一体。现在就开始——不必追求完美，而要持续迭代：选择一项高杠杆技能，用AI消除执行阻力，并坚持每周交付一个真实成果。到2026年，差距将不再存在于‘用AI的人’和‘不用AI的人’之间，而存在于‘主动以意图设计未来的人’与‘被动接受他人默认设定的人’之间。",
+      "sentences": [
+        {
+          "english": "The world isn’t just changing—it’s diverging exponentially.",
+          "chinese": "世界不仅在变化——它正以指数级速度分化。"
+        },
+        {
+          "english": "What feels like noise today will be the foundation of tomorrow’s economy.",
+          "chinese": "今天看似嘈杂的信号，将成为明日经济的基石。"
+        },
+        {
+          "english": "Most people respond to AI disruption in one of three ways: they resist it, they wait for clarity, or they approach it with genuine curiosity.",
+          "chinese": "面对AI带来的颠覆，大多数人只会采取三种反应之一：抗拒、等待，或保持好奇。"
+        },
+        {
+          "english": "Resisters cling to outdated workflows and reject tools that could multiply their output.",
+          "chinese": "抗拒者固守过时的工作流程，拒绝能大幅提升产出的工具。"
+        },
+        {
+          "english": "Waiters delay action, hoping for 'the right moment'—but in exponential change, delay equals obsolescence.",
+          "chinese": "等待者拖延行动，总在等待‘合适的时机’——但在指数级变革中，拖延即意味着被淘汰。"
+        },
+        {
+          "english": "Curious Ones ask questions first: 'How can this amplify my unique human strengths?'",
+          "chinese": "好奇者则率先发问：‘如何用它放大我独有的人类优势？’"
+        },
+        {
+          "english": "They treat AI not as a replacement, but as a lever.",
+          "chinese": "他们把AI视为杠杆，而非替代品。"
+        },
+        {
+          "english": "The most valuable skills aren’t technical—they’re liberating: skills that free your time, deepen your judgment, and strengthen your ability to connect, create meaning, and lead with authenticity.",
+          "chinese": "真正最有价值的技能并非技术性技能，而是‘解放型技能’：它们能解放你的时间、深化你的判断力，并强化你联结他人、创造意义与真实领导的能力。"
+        },
+        {
+          "english": "Your personal moat isn’t built by knowing more than others; it’s built by integrating knowledge, values, and execution in ways machines cannot replicate.",
+          "chinese": "你的个人护城河，不在于比别人知道得更多，而在于以机器无法复制的方式，将知识、价值观与执行力融为一体。"
+        },
+        {
+          "english": "Start now—not with perfection, but with iteration: pick one high-leverage skill, apply AI to remove friction, and ship something real every week.",
+          "chinese": "现在就开始——不必追求完美，而要持续迭代：选择一项高杠杆技能，用AI消除执行阻力，并坚持每周交付一个真实成果。"
+        },
+        {
+          "english": "In 2026, the gap won’t be between those who use AI and those who don’t—it’ll be between those who design their future with intention, and those who inherit someone else’s default.",
+          "chinese": "到2026年，差距将不再存在于‘用AI的人’和‘不用AI的人’之间，而存在于‘主动以意图设计未来的人’与‘被动接受他人默认设定的人’之间。"
+        },
+        {
+          "english": "Liberating skills free you from repetitive tasks so you can focus on what only humans do best.",
+          "chinese": "解放型技能让你摆脱重复性任务，从而专注于唯有人才能做好的事。"
+        },
+        {
+          "english": "Strategic storytelling isn’t about persuasion—it’s about making complexity feel human and memorable.",
+          "chinese": "战略叙事并非关于说服力——而是让复杂变得人性化且令人难忘。"
+        },
+        {
+          "english": "Empathetic client synthesis means listening deeply, connecting unspoken needs, and translating them into actionable insight.",
+          "chinese": "共情式客户需求整合，意味着深度倾听、连接未言明的需求，并将其转化为可执行的洞见。"
+        },
+        {
+          "english": "Systems-level thinking helps you see patterns, anticipate second-order effects, and make decisions that compound over time.",
+          "chinese": "系统性思维助你看清模式、预判二阶效应，并做出能随时间复利增长的决策。"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "diverge",
+          "translation": "分化；偏离",
+          "phonetic": "/daɪˈvɜːdʒ/",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "exponentially",
+          "translation": "以指数方式；急剧地",
+          "phonetic": "/ˌekspəˈnenʃəli/",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "word": "disruption",
+          "translation": "颠覆；中断",
+          "phonetic": "/dɪsˈrʌpʃn/",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "resister",
+          "translation": "抗拒者；抵制者",
+          "phonetic": "/rɪˈzɪstər/",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "outdated",
+          "translation": "过时的；陈旧的",
+          "phonetic": "/ˌaʊtˈdeɪtɪd/",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "workflow",
+          "translation": "工作流程",
+          "phonetic": "/ˈwɜːkfləʊ/",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "obsolescence",
+          "translation": "淘汰；过时",
+          "phonetic": "/ˌɒbsəˈlesns/",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "curiosity",
+          "translation": "好奇心",
+          "phonetic": "/ˌkjʊəriˈɒsəti/",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "leverage",
+          "translation": "杠杆作用；优势",
+          "phonetic": "/ˈliːvərɪdʒ/",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "liberating",
+          "translation": "解放性的；释放性的",
+          "phonetic": "/ˈlɪbəreɪtɪŋ/",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "judgment",
+          "translation": "判断力；判断",
+          "phonetic": "/ˈdʒʌdʒmənt/",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "authenticity",
+          "translation": "真实性；真诚",
+          "phonetic": "/ˌɔːθenˈtɪsəti/",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "moat",
+          "translation": "护城河（比喻不可替代的竞争优势）",
+          "phonetic": "/məʊt/",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "iteration",
+          "translation": "迭代；反复改进",
+          "phonetic": "/ˌɪtəˈreɪʃn/",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "friction",
+          "translation": "阻力；摩擦（此处指执行障碍）",
+          "phonetic": "/ˈfrɪkʃn/",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "intention",
+          "translation": "意图；目的性",
+          "phonetic": "/ɪnˈtenʃn/",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "synthesize",
+          "translation": "综合；整合",
+          "phonetic": "/ˈsɪnθəsaɪz/",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "empathetic",
+          "translation": "共情的；有同理心的",
+          "phonetic": "/ˌempəˈθetɪk/",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "strategic",
+          "translation": "战略性的",
+          "phonetic": "/strəˈtiːdʒɪk/",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "narrative",
+          "translation": "叙事；故事性表达",
+          "phonetic": "/ˈnærətɪv/",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "systemic",
+          "translation": "系统性的",
+          "phonetic": "/sɪsˈtemɪk/",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "compound",
+          "translation": "（使）复合增长；累积",
+          "phonetic": "/ˈkɒmpaʊnd/",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "anticipate",
+          "translation": "预判；预期",
+          "phonetic": "/ænˈtɪsɪpeɪt/",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "insight",
+          "translation": "洞见；深刻见解",
+          "phonetic": "/ˈɪnsaɪt/",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "amplify",
+          "translation": "增强；放大",
+          "phonetic": "/ˈæmplɪfaɪ/",
+          "partOfSpeech": "verb"
+        }
+      ],
+      "audioPath": "/audio/BV1RQvDBpEtc.m4a"
+    },
+    {
+      "id": "video-BV1FkzaBpEEe",
+      "title": "Dimensional Reduction Strike: Dan Koe's Advanced AI Mastery Guide (Life-Changing, Tested) — Dan Koe [Bilingual]",
+      "description": "Do you find AI outputs bland, generic, and strangely artificial? This video exposes the fatal mistake most users make: treating AI like a slot machine—hoping for luck—instead of programming it with precision. Dan Koe reveals his proprietary 'Meta Prompt' workflow: a systematic method to inject expert-level frameworks (e.g., world-class marketing methodologies) directly into AI interactions. As a result, AI evolves from a search tool into a high-caliber thinking partner—capable of writing code *and* using that logic to guide your reasoning. By the end, you'll know exactly how to build your own private expert advisory team—for personal branding, copywriting, or strategic decision-making—with transformative gains in both quality and efficiency.",
+      "descriptionEn": "Transform AI from a search tool into a thinking partner using meta prompts and expert frameworks",
+      "difficulty": 4,
+      "english": "Do you find AI outputs bland, generic, and strangely artificial? This video exposes the fatal mistake most users make: treating AI like a slot machine—hoping for luck—instead of programming it with precision. Dan Koe reveals his proprietary 'Meta Prompt' workflow: a systematic method to inject expert-level frameworks (e.g., world-class marketing methodologies) directly into AI interactions. As a result, AI evolves from a search tool into a high-caliber thinking partner—capable of writing code *and* using that logic to guide your reasoning. By the end, you’ll know exactly how to build your own private expert advisory team—for personal branding, copywriting, or strategic decision-making—with transformative gains in both quality and efficiency. The key is not prompting harder—but prompting *smarter*: embedding domain-specific expertise, role constraints, and step-by-step reasoning scaffolds. When you import a top marketer’s mental model—or a seasoned developer’s debugging protocol—into your prompt, you’re no longer asking AI to guess; you’re delegating cognitive labor to a trained specialist. This shifts AI from passive responder to active co-strategist. Meta Prompts don’t just tell AI *what* to do—they teach it *how* to think within a discipline. You’ll learn concrete templates, real-world examples, and iterative refinement techniques—all designed to eliminate 'plastic-sounding' output and unlock authentic, insight-driven intelligence.",
+      "chinese": "你是否觉得AI生成的内容平淡、千篇一律，还带着一种奇怪的‘塑料感’？本视频揭示了大多数用户犯下的致命错误：把AI当作老虎机——靠运气碰结果，而非像编程一样精准操控。Dan Koe毫无保留地公开了他的独家‘元提示词（Meta Prompt）’工作流：一套系统化方法，可将专家级思维框架（例如顶级营销大师的方法论）直接注入AI交互中。由此，AI便从一个搜索工具，进化为一位高水准的思考伙伴——不仅能编写代码，更能以该逻辑反哺并指导你的决策思路。看完本期视频，你将掌握构建私人专家顾问团的具体路径：无论是打造个人IP、撰写高转化文案，还是进行商业战略决策，内容质量与工作效率都将实现质的飞跃。核心不在于更‘用力’地提问，而在于更‘聪明’地提问：嵌入领域专业知识、角色约束条件，以及分步推理的思维脚手架。当你把顶尖营销人的思维模型，或资深开发者的调试协议，导入提示词中时，你已不再是让AI凭空猜测，而是将认知劳动委托给一位受过专业训练的‘数字专家’。这使AI从被动应答者，转变为积极的协同策略师。元提示词不只是告诉AI‘做什么’，更是教会它‘如何在特定学科内思考’。你将学到可即用的模板、真实场景案例，以及渐进式优化技巧——所有设计都旨在消除‘塑料感’表达，释放真实、洞见驱动的智能。",
+      "sentences": [
+        {
+          "english": "Do you find AI outputs bland, generic, and strangely artificial?",
+          "chinese": "你是否觉得AI生成的内容平淡、千篇一律，还带着一种奇怪的‘塑料感’？"
+        },
+        {
+          "english": "Most people treat AI like a slot machine—hoping for luck instead of programming it with precision.",
+          "chinese": "大多数人把AI当作老虎机——寄希望于运气，而非以编程般的精度去操控它。"
+        },
+        {
+          "english": "Dan Koe’s 'Meta Prompt' workflow transforms AI from a search tool into a high-caliber thinking partner.",
+          "chinese": "Dan Koe 的‘元提示词’工作流，让AI从搜索工具蜕变为高水准的思考伙伴。"
+        },
+        {
+          "english": "A Meta Prompt doesn’t just ask for an answer—it teaches the AI how to think within a specific discipline.",
+          "chinese": "元提示词不仅要求答案，更教会AI如何在特定学科内思考。"
+        },
+        {
+          "english": "By importing expert frameworks—like a top marketer’s mental model—you delegate cognitive labor to a trained specialist.",
+          "chinese": "通过导入专家框架（如顶级营销人的思维模型），你实际上是在将认知劳动委托给一位受训的专业人士。"
+        },
+        {
+          "english": "This shifts AI from a passive responder to an active co-strategist.",
+          "chinese": "这使AI从被动应答者，转变为积极的协同策略师。"
+        },
+        {
+          "english": "The key isn’t prompting harder—it’s prompting smarter.",
+          "chinese": "关键不在于更‘用力’地提问，而在于更‘聪明’地提问。"
+        },
+        {
+          "english": "Embedding role constraints and step-by-step reasoning scaffolds dramatically improves output quality.",
+          "chinese": "嵌入角色约束与分步推理的思维脚手架，能显著提升输出质量。"
+        },
+        {
+          "english": "‘Plastic-sounding’ content arises from shallow prompts—not from AI’s inherent limitations.",
+          "chinese": "‘塑料感’内容源于肤浅的提示词，而非AI本身的能力局限。"
+        },
+        {
+          "english": "With Meta Prompts, you build a private expert advisory team—one prompt at a time.",
+          "chinese": "借助元提示词，你能逐条提示，逐步搭建起属于自己的私人专家顾问团。"
+        },
+        {
+          "english": "This method works equally well for writing persuasive copy, debugging code, or evaluating business risks.",
+          "chinese": "这一方法同样适用于撰写高说服力文案、调试代码，或评估商业风险。"
+        },
+        {
+          "english": "A good Meta Prompt includes three core elements: role definition, expert methodology, and reasoning structure.",
+          "chinese": "一条优质的元提示词包含三大核心要素：角色定义、专家方法论和推理结构。"
+        },
+        {
+          "english": "Instead of saying ‘Write a social media post,’ try: ‘Act as a behavioral psychologist specializing in habit formation—apply the Fogg Behavior Model to craft a 3-tweet thread that triggers action.’",
+          "chinese": "不要只说‘写一条社交媒体帖子’，而应尝试：‘请扮演一名专注习惯养成的行为心理学家——运用福格行为模型，设计一条含3条推文的线程，有效触发用户行动。’"
+        },
+        {
+          "english": "Iterative refinement—testing, analyzing, and adjusting prompts—is essential to mastering Meta Prompting.",
+          "chinese": "迭代优化——不断测试、分析并调整提示词——是掌握元提示词技术的关键。"
+        },
+        {
+          "english": "Your AI isn’t broken; your prompting strategy is outdated.",
+          "chinese": "不是你的AI出了问题，而是你的提示策略已经过时。"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "bland",
+          "translation": "平淡无味的；缺乏特色的",
+          "phonetic": "/blænd/",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "generic",
+          "translation": "通用的；千篇一律的；缺乏个性的",
+          "phonetic": "/dʒəˈnɛrɪk/",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "artificial",
+          "translation": "人工的；不自然的；做作的",
+          "phonetic": "/ˌɑːrtɪˈfɪʃəl/",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "fatal",
+          "translation": "致命的；灾难性的",
+          "phonetic": "/ˈfeɪtəl/",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "slot machine",
+          "translation": "老虎机；靠运气的随机系统",
+          "phonetic": "/slɒt məˈʃiːn/",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "proprietarily",
+          "translation": "专有的；独家的",
+          "phonetic": "/prəˈpraɪətɛrɪli/",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "word": "workflow",
+          "translation": "工作流程；操作流程",
+          "phonetic": "/ˈwɜːrkfloʊ/",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "systematic",
+          "translation": "系统的；有条理的",
+          "phonetic": "/ˌsɪstəˈmætɪk/",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "framework",
+          "translation": "框架；结构体系",
+          "phonetic": "/ˈfreɪmwɜːrk/",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "methodology",
+          "translation": "方法论；研究方法体系",
+          "phonetic": "/ˌmɛθəˈdɒlədʒi/",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "cognitive",
+          "translation": "认知的；与思维相关的",
+          "phonetic": "/ˈkɒɡnətɪv/",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "delegate",
+          "translation": "委派；授权；委托",
+          "phonetic": "/ˈdɛləɡeɪt/",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "scaffold",
+          "translation": "脚手架；思维支架（教学/认知支持结构）",
+          "phonetic": "/ˈskæfəld/",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "discipline",
+          "translation": "学科；专业领域；自律",
+          "phonetic": "/ˈdɪsəplɪn/",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "iterative",
+          "translation": "迭代的；重复循环的",
+          "phonetic": "/ˈɪtərətɪv/",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "refinement",
+          "translation": "精炼；优化；完善",
+          "phonetic": "/rɪˈfaɪnmənt/",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "persuasive",
+          "translation": "有说服力的；劝说性的",
+          "phonetic": "/pərˈsweɪsɪv/",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "debugging",
+          "translation": "调试（程序）；排查错误",
+          "phonetic": "/diːˈbʌɡɪŋ/",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "evaluate",
+          "translation": "评估；评价",
+          "phonetic": "/ɪˈvæljueɪt/",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "constraint",
+          "translation": "约束；限制条件",
+          "phonetic": "/kənˈstreɪnt/",
+          "partOfSpeech": "noun"
+        },
+        {
+          "word": "trigger",
+          "translation": "触发；引发",
+          "phonetic": "/ˈtrɪɡər/",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "behavioral",
+          "translation": "行为的；与行为相关的",
+          "phonetic": "/bɪˈheɪvjərəl/",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "habit formation",
+          "translation": "习惯养成",
+          "phonetic": "/ˈhæbɪt fɔːrˈmeɪʃən/",
+          "partOfSpeech": "noun phrase"
+        },
+        {
+          "word": "transform",
+          "translation": "转变；彻底改变",
+          "phonetic": "/trænsˈfɔːrm/",
+          "partOfSpeech": "verb"
+        },
+        {
+          "word": "authentic",
+          "translation": "真实的；可信的；原汁原味的",
+          "phonetic": "/ɔːˈθɛntɪk/",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "word": "insight-driven",
+          "translation": "由洞察力驱动的",
+          "phonetic": "/ˈɪnsaɪt drɪvən/",
+          "partOfSpeech": "adjective"
+        }
+      ],
+      "audioPath": "/audio/BV1FkzaBpEEe.m4a"
+    }
+  ]
 }

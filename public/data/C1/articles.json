@@ -1,23 +1,64 @@
 {
   "articles": [
     {
-      "id": "c1-001",
+      "id": "c1-1",
       "title": "The Philosophical Implications of Artificial Intelligence",
+      "description": "人工智能的哲学含义",
+      "descriptionEn": "Philosophical implications of artificial intelligence",
+      "difficulty": 4,
       "english": "The emergence of sophisticated artificial intelligence systems has precipitated profound philosophical inquiries into the nature of consciousness, cognition, and human identity. As machines demonstrate increasingly sophisticated capabilities in pattern recognition and decision-making, we are compelled to reconsider fundamental assumptions about what constitutes intelligence and sentience. The epistemological ramifications extend beyond mere technological advancement; they challenge our understanding of human exceptionalism and necessitate a comprehensive reevaluation of ethical frameworks governing human-machine interaction.",
       "chinese": "复杂人工智能系统的出现引发了关于意识、认知和人类身份本质的深刻哲学思考。随着机器在模式识别和决策制定中展现出越来越复杂的能力，我们被迫重新考虑关于什么构成智能和感知的基本假设。认识论的影响超越了单纯的技术进步；它们挑战了我们对人类例外性的理解，并需要对管理人机交互的伦理框架进行全面重新评估。",
       "sentences": [
         {
-          "id": "s1",
           "english": "The emergence of sophisticated artificial intelligence systems has precipitated profound philosophical inquiries.",
           "chinese": "复杂人工智能系统的出现引发了深刻的哲学思考。"
+        },
+        {
+          "english": "As machines demonstrate increasingly sophisticated capabilities, we are compelled to reconsider fundamental assumptions.",
+          "chinese": "随着机器展现出越来越复杂的能力，我们被迫重新考虑基本假设。"
         }
       ],
-      "vocab": [
+      "vocabulary": [
         {
           "word": "precipitated",
-          "pronunciation": "/prɪˈsɪpɪteɪtɪd/",
-          "meaning": "caused something to happen suddenly",
-          "example": "The scandal precipitated his resignation."
+          "translation": "引发",
+          "phonetic": "/prɪˈsɪpɪteɪtɪd/",
+          "partOfSpeech": "动词"
+        },
+        {
+          "word": "epistemological",
+          "translation": "认识论的",
+          "phonetic": "/ɪˌpɪstəməˈlɒdʒɪkl/",
+          "partOfSpeech": "形容词"
+        }
+      ]
+    },
+    {
+      "id": "c1-2",
+      "title": "Postmodern Literary Theory",
+      "description": "后现代文学理论",
+      "descriptionEn": "Postmodern literary theory and interpretation",
+      "difficulty": 4,
+      "english": "Postmodern literary theory fundamentally challenges the conventional paradigms of textual interpretation and authorial intent. Deconstructionist approaches, pioneered by theorists such as Jacques Derrida, interrogate the stability of meaning and the hierarchical structures inherent in Western philosophical traditions. The proliferation of intertextual references and metanarrative techniques in contemporary literature reflects a broader epistemological shift toward embracing ambiguity and multiplicity of interpretation.",
+      "chinese": "后现代文学理论从根本上挑战了文本解释和作者意图的传统范式。由雅克·德里达等理论家开创的解构主义方法质疑意义的稳定性和西方哲学传统中固有的等级结构。当代文学中互文性参考和元叙事技巧的增加反映了一种更广泛的认识论转变，即接受歧义和解释的多重性。",
+      "sentences": [
+        {
+          "english": "Postmodern literary theory fundamentally challenges conventional paradigms of textual interpretation.",
+          "chinese": "后现代文学理论从根本上挑战了文本解释的传统范式。"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "deconstructionist",
+          "translation": "解构主义的",
+          "phonetic": "/ˌdekənˈstrʌkʃənɪst/",
+          "partOfSpeech": "形容词"
+        },
+        {
+          "word": "intertextual",
+          "translation": "互文的",
+          "phonetic": "/ˌɪntətekstʃuəl/",
+          "partOfSpeech": "形容词"
         }
       ]
     }

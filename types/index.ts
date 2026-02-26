@@ -1,31 +1,26 @@
-export interface Article {
-  id: string
-  title: string
-  english: string
-  chinese: string
-  sentences: Sentence[]
-  vocab: Vocabulary[]
-  audioUrl?: string
-}
-
 export interface Sentence {
-  id: string
   english: string
   chinese: string
 }
 
 export interface Vocabulary {
   word: string
-  pronunciation: string
-  meaning: string
-  example: string
+  translation: string
+  phonetic: string
+  partOfSpeech: string
 }
 
-export interface Level {
+export interface Article {
   id: string
-  name: string
+  title: string
   description: string
-  articles: Article[]
+  descriptionEn?: string
+  difficulty: number
+  english: string
+  chinese: string
+  sentences: Sentence[]
+  vocabulary: Vocabulary[]
+  audioPath?: string
 }
 
 export interface Achievement {
@@ -55,7 +50,53 @@ export interface UserProgress {
   perfectTests: number
 }
 
+export interface Level {
+  id: string
+  name: string
+  description: string
+  articles: Article[]
+}
+
 export interface Data {
   levels: Level[]
   achievements: Achievement[]
+}
+
+export type ConversionStatus = 'pending' | 'downloading' | 'converting' | 'saving' | 'done' | 'error'
+
+export interface AdminTask {
+  taskId: string
+  videoId: string
+  url: string
+  status: ConversionStatus
+  progress: number
+  message: string
+  error?: string
+  startTime: number
+  endTime?: number
+}
+
+export interface ConversionHistory {
+  id: string
+  videoId: string
+  title: string
+  difficulty: number
+  status: 'success' | 'failed'
+  createdAt: string
+  audioPath: string
+  error?: string
+}
+
+export interface ProgressUpdate {
+  taskId: string
+  status: ConversionStatus
+  progress: number
+  message: string
+  error?: string
+  article?: Article
+}
+
+export interface QueuedTask extends AdminTask {
+  queueStatus: 'pending' | 'running' | 'completed'
+  queueIndex: number
 }

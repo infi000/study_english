@@ -1,23 +1,58 @@
 {
   "articles": [
     {
-      "id": "b2-001",
+      "id": "b2-1",
       "title": "Climate Change and Environmental Protection",
+      "description": "气候变化与环保",
+      "descriptionEn": "Climate change and environmental sustainability",
+      "difficulty": 3,
       "english": "Climate change represents one of the most pressing challenges of our time. The accumulation of greenhouse gases in the atmosphere has led to unprecedented global warming, resulting in severe weather patterns, rising sea levels, and ecological disruption. Addressing this crisis requires comprehensive international cooperation, substantial investment in renewable energy, and fundamental changes in consumer behavior. While the situation is dire, emerging technologies and growing environmental consciousness offer hope for a sustainable future.",
       "chinese": "气候变化是我们时代最紧迫的挑战之一。大气中温室气体的积累导致了前所未有的全球变暖，导致恶劣的天气模式、海平面上升和生态破坏。解决这一危机需要全面的国际合作、对可再生能源的大量投资以及消费者行为的根本改变。虽然形势严峻，但新兴技术和日益增长的环保意识为可持续的未来提供了希望。",
       "sentences": [
         {
-          "id": "s1",
           "english": "Climate change represents one of the most pressing challenges of our time.",
           "chinese": "气候变化是我们时代最紧迫的挑战之一。"
+        },
+        {
+          "english": "The accumulation of greenhouse gases in the atmosphere has led to unprecedented global warming.",
+          "chinese": "大气中温室气体的积累导致了前所未有的全球变暖。"
         }
       ],
-      "vocab": [
+      "vocabulary": [
         {
           "word": "unprecedented",
-          "pronunciation": "/ʌnˈpresɪdentɪd/",
-          "meaning": "never done or known before",
-          "example": "The pandemic caused unprecedented economic disruption."
+          "translation": "前所未有的",
+          "phonetic": "/ʌnˈpresɪdentɪd/",
+          "partOfSpeech": "形容词"
+        },
+        {
+          "word": "greenhouse",
+          "translation": "温室",
+          "phonetic": "/ˈɡriːnhaʊs/",
+          "partOfSpeech": "名词"
+        }
+      ]
+    },
+    {
+      "id": "b2-2",
+      "title": "Global Economics and Trade",
+      "description": "全球经济与贸易",
+      "descriptionEn": "Global economics and international trade",
+      "difficulty": 3,
+      "english": "The global economy is increasingly interconnected through international trade and investment. Multinational corporations play a significant role in shaping economic policies and market dynamics. However, economic globalization has also created disparities between developed and developing nations. Understanding these complex relationships is essential for navigating the modern economic landscape.",
+      "chinese": "全球经济通过国际贸易和投资日益相互联系。跨国公司在塑造经济政策和市场动态中发挥重要作用。然而，经济全球化也造成了发达国家和发展中国家之间的差异。理解这些复杂的关系对于驾驭现代经济格局至关重要。",
+      "sentences": [
+        {
+          "english": "The global economy is increasingly interconnected through international trade and investment.",
+          "chinese": "全球经济通过国际贸易和投资日益相互联系。"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "interconnected",
+          "translation": "相互联系的",
+          "phonetic": "/ˌɪntərkəˈnektɪd/",
+          "partOfSpeech": "形容词"
         }
       ]
     }

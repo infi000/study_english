@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'NewsMaster - 英语新闻学习',
-  description: '通过打磨新闻文章提高英语水平',
+  title: '英语学习应用 - 从入门到精通',
+  description: '通过系统化的学习内容和多种学习模式提高英语水平',
 }
 
 export default function RootLayout({

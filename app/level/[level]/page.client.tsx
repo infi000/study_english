@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import { ArrowLeft, CheckCircle, BookOpen, Lock } from 'lucide-react'
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -7,13 +8,35 @@ import { useDataStore } from '@/lib/data-store'
 import { useProgressStore } from '@/lib/progress-store'
 
 export function LevelClient({ level }: { level: string }) {
-  const { levels } = useDataStore()
-  const { articleProgress, isLevelUnlocked } = useProgressStore()
+  const { levels, loadData } = useDataStore()
+  const { articleProgress } = useProgressStore()
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    const initialize = async () => {
+      const currentLevels = useDataStore.getState().levels
+      if (currentLevels.length > 0) {
+        setIsLoading(false)
+        return
+      }
+
+      try {
+        await loadData()
+        setIsLoading(false)
+      } catch (error) {
+        console.error('加载数据失败:', error)
+        setIsLoading(false)
+      }
+    }
+
+    initialize()
+  }, [])
 
   const levelId = level.toUpperCase()
   const levelData = levels.find(l => l.id === levelId)
 
-  const isArticleUnlocked = (index: number, articleId: string) => {
+  const isArticleUnlocked = (index: number) => {
+    if (levelData?.id === 'VIDEO' || levelData?.id === 'DON_KOE') return true
     if (index === 0) return true
     const prevArticleId = levelData?.articles[index - 1].id
     return !!prevArticleId && !!articleProgress[prevArticleId]?.completed
@@ -21,6 +44,15 @@ export function LevelClient({ level }: { level: string }) {
 
   const isArticleCompleted = (articleId: string) => {
     return !!articleProgress[articleId]?.completed
+  }
+
+  if (isLoading) {
+    return (
+      <div className="container mx-auto px-4 py-8 max-w-md text-center">
+        <div className="text-6xl mb-4">⏳</div>
+        <h2 className="text-2xl font-bold text-gray-800 mb-2">加载中...</h2>
+      </div>
+    )
   }
 
   if (!levelData) {
@@ -54,7 +86,7 @@ export function LevelClient({ level }: { level: string }) {
 
       <div className="space-y-4">
         {levelData.articles.map((article, index) => {
-          const unlocked = isArticleUnlocked(index, article.id)
+          const unlocked = isArticleUnlocked(index)
           const completed = isArticleCompleted(article.id)
 
           return (
@@ -113,7 +145,7 @@ export function LevelClient({ level }: { level: string }) {
                     </div>
                     <div className="flex items-center gap-1">
                       <Lock className="h-4 w-4" />
-                      <span>{article.vocab.length} 生词</span>
+                      <span>{article.vocabulary.length} 生词</span>
                     </div>
                   </div>
                 </div>

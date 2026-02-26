@@ -1,19 +1,16 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { BookOpen, Flame, Trophy, TrendingUp, Lock, Unlock, Sparkles } from 'lucide-react'
+import { BookOpen, Flame, Trophy, Lock, Unlock, Sparkles } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
 import { Progress } from '@/components/ui/progress'
-import { Separator } from '@/components/ui/separator'
 import { useDataStore } from '@/lib/data-store'
 import { useProgressStore } from '@/lib/progress-store'
 
 export function HomeClient() {
-  const { levels, loadData, getAchievement } = useDataStore()
+  const { levels } = useDataStore()
   const { achievements: userAchievements } = useProgressStore()
-  const { streak, completedArticles, unlockedLevels, isLevelUnlocked } = useProgressStore()
+  const { streak, completedArticles, isLevelUnlocked } = useProgressStore()
   const [isLoading, setIsLoading] = useState(true)
 
   console.log('🏠 HomeClient 渲染，levels:', levels.length, 'isLoading:', isLoading)
@@ -55,17 +52,6 @@ export function HomeClient() {
       isMounted = false
     }
   }, [])
-
-  const getDifficultyColor = (levelId: string) => {
-    switch (levelId) {
-      case 'A1': return 'from-green-500 to-emerald-600'
-      case 'A2': return 'from-blue-500 to-cyan-600'
-      case 'B1': return 'from-indigo-500 to-purple-600'
-      case 'B2': return 'from-orange-500 to-red-600'
-      case 'C1': return 'from-red-500 to-rose-600'
-      default: return 'from-gray-500 to-slate-600'
-    }
-  }
 
   const getLevelProgress = (levelId: string) => {
     return Math.min((completedArticles / (levels.findIndex(l => l.id === levelId) + 1) / 3) * 100, 100)

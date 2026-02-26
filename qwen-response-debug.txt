@@ -1,0 +1,269 @@
+===== 原始完整响应 =====
+```json
+{
+  "chinese": "尽管听起来可能有点老套，但我一直渴望成为一股不容小觑的力量。\n\n一个绝对强大的个体。\n\n这不仅仅意味着拥有健美而肌肉发达的身体，更意味着在人生的每一个领域都得到全面发展。\n\n我想成为一个多维度‘练满’的人——把所有能力值都拉到顶点。我不想当一个NPC（非玩家角色），而想成为一名满级玩家：地图全解锁、体能、智力、职业能力全部拉满，银行账户金币 overflowing（爆满）。我想做到面面俱到：心智、身体、精神、人际关系、财富。\n\n这种渴望深刻地塑造了我的人生轨迹。\n\n青少年时期，我痴迷于健身；随后，我渴望尽可能多地吸收知识；再后来，我追求自由——于是尝试了多种商业模式，屡败屡战，最终成功打造出可持续的事业。我也经历过不同阶段的灵性探索与哲学思辨，这些经历让我得以用一种与常人截然不同的视角，重新审视金钱、健身等看似‘表面化’的追求。\n\n过去15年里，我深入研究了心理学、个人成长、哲学、社会动力学、科技、互联网、初创企业、财富积累、宗教与生命意义等广阔领域。\n\n过去5年，我持续将研究成果发布于网络，逐渐发现一些关键的重叠模式——它们正在凝聚成一种面向当今世界的新哲学。\n\n“人类3.0”（HUMAN 3.0）正是由此诞生。\n\n我希望将毕生所学熔铸成一张综合性的导航地图，助你穿越这个复杂纷繁的现代世界。我要为你提供真正能助你摆脱平庸、实现最高潜能的知识、技能与核心原则。我会尽力让这套体系保持非教条化、以科学为根基；同时，也力求表达清晰有力、富有说服力。我将以当代语境写作，使用自然、易懂的语言，并尽最大努力简化概念，避免它沦为一本被束之高阁的枯燥教科书。正因如此，我会用我日常说话的方式表达，而把细微之处与深层思辨的空间，留给你自己。\n\n真正的思辨权与批判性思考，永远属于读者本人。\n\n这将是一个持续更新的系列，我们将共同解构人类经验，并为你现实认知系统进行‘重编程’，从而活出最理想的人生。\n\n其中很多观点可能是错误的——我鼓励你质疑我所说的每一句话。事实上，我真诚希望你能与我一同共建这一框架。如果你在自己的文章或内容中引用、讨论‘人类3.0’，我非常期待看到！请大胆拿走这些想法，延展它、丰富它、迭代它。如果你喜欢H3.0模型，请直接使用它。",
+  "sentences": [
+    {
+      "english": "As corny as this may sound, I’ve always wanted to become a force to be reckoned with.",
+      "chinese": "尽管听起来可能有点老套，但我一直渴望成为一股不容小觑的力量。"
+    },
+    {
+      "english": "An absolute unit of an individual.",
+      "chinese": "一个绝对强大的个体。"
+    },
+    {
+      "english": "Not just having a nice and muscular body, but to be fully developed in every domain of life.",
+      "chinese": "这不仅仅意味着拥有健美而肌肉发达的身体，更意味着在人生的每一个领域都得到全面发展。"
+    },
+    {
+      "english": "I wanted to become multidimensionally jacked.",
+      "chinese": "我想成为一个多维度‘练满’的人。"
+    },
+    {
+      "english": "I didn’t want to be an NPC. I wanted to be a level 100 player.",
+      "chinese": "我不想当一个NPC（非玩家角色），而想成为一名满级玩家。"
+    },
+    {
+      "english": "All areas of the map unlocked. Maxed out physicality, intellect, and professions.",
+      "chinese": "地图全解锁；体能、智力、职业能力全部拉满。"
+    },
+    {
+      "english": "Bank overflowing with gold.",
+      "chinese": "银行账户金币爆满。"
+    },
+    {
+      "english": "This desire has drastically influenced my life.",
+      "chinese": "这种渴望深刻地塑造了我的人生轨迹。"
+    },
+    {
+      "english": "I’ve had various spiritual and philosophical stints that helped me see 'superficial pursuits' like money and fitness in a completely different light.",
+      "chinese": "我也经历过不同阶段的灵性探索与哲学思辨，这些经历让我得以用一种与常人截然不同的视角，重新审视金钱、健身等看似‘表面化’的追求。"
+    },
+    {
+      "english": "After writing about my findings online for the past 5 years, I’ve noticed critical overlapping patterns that have begun to form a new philosophy for today’s world.",
+      "chinese": "过去5年，我持续将研究成果发布于网络，逐渐发现一些关键的重叠模式——它们正在凝聚成一种面向当今世界的新哲学。"
+    },
+    {
+      "english": "I want to synthesize everything I’ve learned into one comprehensive map to navigate the modern landscape.",
+      "chinese": "我希望将毕生所学熔铸成一张综合性的导航地图，助你穿越这个复杂纷繁的现代世界。"
+    },
+    {
+      "english": "I will attempt to make this as non-dogmatic and science-backed as possible, but I also want to get the point across with clarity and conviction.",
+      "chinese": "我会尽力让这套体系保持非教条化、以科学为根基；同时，也力求表达清晰有力、富有说服力。"
+    },
+    {
+      "english": "I plan to write this for today’s world using clear, natural language while simplifying these concepts as best I can.",
+      "chinese": "我将以当代语境写作，使用自然、易懂的语言，并尽最大努力简化概念。"
+    },
+    {
+      "english": "For that reason, I am going to speak how I speak and pass the nuance off to you.",
+      "chinese": "正因如此，我会用我日常说话的方式表达，而把细微之处与深层思辨的空间，留给你自己。"
+    },
+    {
+      "english": "The nuance and critical thinking always lie with the reader.",
+      "chinese": "真正的思辨权与批判性思考，永远属于读者本人。"
+    },
+    {
+      "english": "This will be an ongoing series where we dissect the human experience and reprogram your reality to live the best life possible.",
+      "chinese": "这将是一个持续更新的系列，我们将共同解构人类经验，并为你现实认知系统进行‘重编程’，从而活出最理想的人生。"
+    },
+    {
+      "english": "Much of it will be wrong, and I encourage you to question what I say.",
+      "chinese": "其中很多观点可能是错误的——我鼓励你质疑我所说的每一句话。"
+    },
+    {
+      "english": "In fact, I hope that you can build this out with me.",
+      "chinese": "事实上，我真诚希望你能与我一同共建这一框架。"
+    },
+    {
+      "english": "Take these ideas and build on them.",
+      "chinese": "请大胆拿走这些想法，延展它、丰富它、迭代它。"
+    },
+    {
+      "english": "If you like the H3.0 model, use it.",
+      "chinese": "如果你喜欢H3.0模型，请直接使用它。"
+    }
+  ],
+  "vocabulary": [
+    {
+      "word": "corny",
+      "translation": "老套的；俗气的；陈腐的",
+      "phonetic": "/ˈkɔːr.ni/",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "word": "reckoned",
+      "translation": "被考虑的；被重视的；被估量的",
+      "phonetic": "/ˈrek.ənd/",
+      "partOfSpeech": "verb (past participle)"
+    },
+    {
+      "word": "absolute",
+      "translation": "绝对的；完全的；无条件的",
+      "phonetic": "/ˈæb.sə.luːt/",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "word": "unit",
+      "translation": "个体；单位；强大力量（俚语）",
+      "phonetic": "/ˈjuː.nɪt/",
+      "partOfSpeech": "noun"
+    },
+    {
+      "word": "multidimensional",
+      "translation": "多维的；多层面的",
+      "phonetic": "/ˌmʌl.ti.dɪˈmen.ʃən.əl/",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "word": "jacked",
+      "translation": "肌肉发达的；精力充沛的（俚语）；此处引申为‘全面强化/拉满’",
+      "phonetic": "/dʒækt/",
+      "partOfSpeech": "adjective (slang)"
+    },
+    {
+      "word": "NPC",
+      "translation": "非玩家角色（源自电子游戏）；指缺乏自主性、随波逐流的人",
+      "phonetic": "/en piː siː/",
+      "partOfSpeech": "noun (acronym)"
+    },
+    {
+      "word": "level 100 player",
+      "translation": "满级玩家（游戏术语）；喻指能力全面成熟、高度自主的个体",
+      "phonetic": "/ˈlev.əl ˈhʌn.drəd ˈpleɪ.ər/",
+      "partOfSpeech": "noun phrase"
+    },
+    {
+      "word": "overwhelming",
+      "translation": "压倒性的；势不可挡的",
+      "phonetic": "/ˌəʊ.vərˈhel.mɪŋ/",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "word": "mediocrity",
+      "translation": "平庸；平凡；平庸的状态",
+      "phonetic": "/ˌmiː.diˈɒk.rə.ti/",
+      "partOfSpeech": "noun"
+    },
+    {
+      "word": "actualize",
+      "translation": "使成为现实；实现（潜能）",
+      "phonetic": "/ˈæk.tʃu.ə.laɪz/",
+      "partOfSpeech": "verb"
+    },
+    {
+      "word": "non-dogmatic",
+      "translation": "非教条的；不固守信条的",
+      "phonetic": "/nɒn ˈdɒɡ.mæt.ɪk/",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "word": "science-backed",
+      "translation": "以科学研究为依据的；有科学支撑的",
+      "phonetic": "/ˈsaɪ.əns ˈbæk.t/",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "word": "conviction",
+      "translation": "坚定信念；说服力；确信",
+      "phonetic": "/kənˈvɪk.ʃən/",
+      "partOfSpeech": "noun"
+    },
+    {
+      "word": "nuance",
+      "translation": "细微差别；微妙之处",
+      "phonetic": "/ˈnjuː.ɑːns/",
+      "partOfSpeech": "noun"
+    },
+    {
+      "word": "critical thinking",
+      "translation": "批判性思维；审辩式思维",
+      "phonetic": "/ˈkrɪt.ɪ.kəl ˈθɪŋ.kɪŋ/",
+      "partOfSpeech": "noun phrase"
+    },
+    {
+      "word": "dissect",
+      "translation": "剖析；解构；仔细分析",
+      "phonetic": "/dɪˈsek.t/",
+      "partOfSpeech": "verb"
+    },
+    {
+      "word": "reprogram",
+      "translation": "重新编程；重塑（思维/认知模式）",
+      "phonetic": "/ˌriːˈprəʊ.ɡræm/",
+      "partOfSpeech": "verb"
+    },
+    {
+      "word": "synthesize",
+      "translation": "综合；融合；归纳提炼",
+      "phonetic": "/ˈsɪn.θə.saɪz/",
+      "partOfSpeech": "verb"
+    },
+    {
+      "word": "overlapping",
+      "translation": "重叠的；交叉的",
+      "phonetic": "/ˌəʊ.vərˈlæp.ɪŋ/",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "word": "philosophy",
+      "translation": "哲学；思想体系；人生观",
+      "phonetic": "/fəˈlɒs.ə.fi/",
+      "partOfSpeech": "noun"
+    },
+    {
+      "word": "stint",
+      "translation": "短期经历；一段时期（尤指特定活动）",
+      "phonetic": "/stɪnt/",
+      "partOfSpeech": "noun"
+    },
+    {
+      "word": "superficial",
+      "translation": "表面的；肤浅的；浅层的",
+      "phonetic": "/ˌsuː.pəˈfɪʃ.əl/",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "word": "trajectory",
+      "translation": "轨迹；发展路径；人生走向",
+      "phonetic": "/trəˈdʒek.tər.i/",
+      "partOfSpeech": "noun"
+    },
+    {
+      "word": "autonomous",
+      "translation": "自主的
+
+===== 提取的 JSON 部分 =====
+{
+  "chinese": "尽管听起来可能有点老套，但我一直渴望成为一股不容小觑的力量。\n\n一个绝对强大的个体。\n\n这不仅仅意味着拥有健美而肌肉发达的身体，更意味着在人生的每一个领域都得到全面发展。\n\n我想成为一个多维度‘练满’的人——把所有能力值都拉到顶点。我不想当一个NPC（非玩家角色），而想成为一名满级玩家：地图全解锁、体能、智力、职业能力全部拉满，银行账户金币 overflowing（爆满）。我想做到面面俱到：心智、身体、精神、人际关系、财富。\n\n这种渴望深刻地塑造了我的人生轨迹。\n\n青少年时期，我痴迷于健身；随后，我渴望尽可能多地吸收知识；再后来，我追求自由——于是尝试了多种商业模式，屡败屡战，最终成功打造出可持续的事业。我也经历过不同阶段的灵性探索与哲学思辨，这些经历让我得以用一种与常人截然不同的视角，重新审视金钱、健身等看似‘表面化’的追求。\n\n过去15年里，我深入研究了心理学、个人成长、哲学、社会动力学、科技、互联网、初创企业、财富积累、宗教与生命意义等广阔领域。\n\n过去5年，我持续将研究成果发布于网络，逐渐发现一些关键的重叠模式——它们正在凝聚成一种面向当今世界的新哲学。\n\n“人类3.0”（HUMAN 3.0）正是由此诞生。\n\n我希望将毕生所学熔铸成一张综合性的导航地图，助你穿越这个复杂纷繁的现代世界。我要为你提供真正能助你摆脱平庸、实现最高潜能的知识、技能与核心原则。我会尽力让这套体系保持非教条化、以科学为根基；同时，也力求表达清晰有力、富有说服力。我将以当代语境写作，使用自然、易懂的语言，并尽最大努力简化概念，避免它沦为一本被束之高阁的枯燥教科书。正因如此，我会用我日常说话的方式表达，而把细微之处与深层思辨的空间，留给你自己。\n\n真正的思辨权与批判性思考，永远属于读者本人。\n\n这将是一个持续更新的系列，我们将共同解构人类经验，并为你现实认知系统进行‘重编程’，从而活出最理想的人生。\n\n其中很多观点可能是错误的——我鼓励你质疑我所说的每一句话。事实上，我真诚希望你能与我一同共建这一框架。如果你在自己的文章或内容中引用、讨论‘人类3.0’，我非常期待看到！请大胆拿走这些想法，延展它、丰富它、迭代它。如果你喜欢H3.0模型，请直接使用它。",
+  "sentences": [
+    {
+      "english": "As corny as this may sound, I’ve always wanted to become a force to be reckoned with.",
+      "chinese": "尽管听起来可能有点老套，但我一直渴望成为一股不容小觑的力量。"
+    },
+    {
+      "english": "An absolute unit of an individual.",
+      "chinese": "一个绝对强大的个体。"
+    },
+    {
+      "english": "Not just having a nice and muscular body, but to be fully developed in every domain of life.",
+      "chinese": "这不仅仅意味着拥有健美而肌肉发达的身体，更意味着在人生的每一个领域都得到全面发展。"
+    },
+    {
+      "english": "I wanted to become multidimensionally jacked.",
+      "chinese": "我想成为一个多维度‘练满’的人。"
+    },
+    {
+      "english": "I didn’t want to be an NPC. I wanted to be a level 100 player.",
+      "chinese": "我不想当一个NPC（非玩家角色），而想成为一名满级玩家。"
+    },
+    {
+      "english": "All areas of the map unlocked. Maxed out physicality, intellect, and professions.",
+      "chinese": "地图全解锁；体能、智力、职业能力全部拉满。"
+    },
+    {
+      "english": "Bank overflowing with gold.",
+      "chinese": "银行账户金币爆满。"
+    },
+    {
+      "english": "This desire has drastically 

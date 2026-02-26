@@ -1,0 +1,29 @@
+[
+  {
+    "id": "task-1771854901659",
+    "videoId": "video-BV1RQvDBpEtc",
+    "title": "Everything Will Change in 2026 (Master These Skills) — Dan Koe [Bilingual]",
+    "difficulty": 4,
+    "status": "success",
+    "createdAt": "2026/2/23 21:56:44",
+    "audioPath": "/audio/BV1RQvDBpEtc.mp3"
+  },
+  {
+    "id": "task-1771854275171",
+    "videoId": "video-BV1eBkYB9EQJ",
+    "title": "How to Master Any Skill in Two Weeks — Dan Koe",
+    "difficulty": 4,
+    "status": "success",
+    "createdAt": "2026/2/23 21:45:59",
+    "audioPath": "/audio/BV1eBkYB9EQJ.mp3"
+  },
+  {
+    "id": "video-1",
+    "videoId": "video-1",
+    "title": "English Learning Tips",
+    "difficulty": 2,
+    "status": "success",
+    "createdAt": "2026/2/23 21:44:28",
+    "audioPath": ""
+  }
+]
