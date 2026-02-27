@@ -10,11 +10,12 @@ interface AudioPlayerProps {
   text?: string
   audioPath?: string
   rate?: number
+  hideText?: boolean
   onRateChange?: (rate: number) => void
   onProgress?: (progress: number) => void
 }
 
-export function AudioPlayer({ text, audioPath, rate = 1, onRateChange, onProgress }: AudioPlayerProps) {
+export function AudioPlayer({ text, audioPath, rate = 1, hideText, onRateChange, onProgress }: AudioPlayerProps) {
   const audioRef = useRef<HTMLAudioElement>(null)
   const [currentRate, setCurrentRate] = useState(rate)
   const [progress, setProgress] = useState(0)
@@ -71,7 +72,7 @@ export function AudioPlayer({ text, audioPath, rate = 1, onRateChange, onProgres
   if (audioPath && !useFallback && !audioError) {
     return (
       <div className="space-y-4">
-        <div className="flex items-center gap-4 p-4 bg-gray-100 rounded-lg">
+        <div className="flex items-center gap-3 p-4 bg-gray-100 dark:bg-gray-800/50 rounded-lg">
           <audio
             ref={audioRef}
             src={audioPath}
@@ -79,14 +80,14 @@ export function AudioPlayer({ text, audioPath, rate = 1, onRateChange, onProgres
             onEnded={handleEnded}
             onError={handleAudioError}
             controls
-            className="flex-1"
+            className="flex-1 min-w-0 h-[36px]"
           />
-          <div className="flex items-center gap-2">
-            <span className="text-sm text-gray-600">速度:</span>
+          <div className="flex items-center gap-1.5 flex-shrink-0">
+            <span className="text-xs text-gray-500">速度</span>
             <select
               value={currentRate}
               onChange={(e) => handleRateChange(parseFloat(e.target.value))}
-              className="px-2 py-1 border rounded text-sm"
+              className="px-1.5 py-1.5 border rounded-lg text-xs bg-white dark:bg-gray-700 dark:border-gray-600"
             >
               <option value={0.5}>0.5x</option>
               <option value={0.75}>0.75x</option>
@@ -98,7 +99,7 @@ export function AudioPlayer({ text, audioPath, rate = 1, onRateChange, onProgres
           </div>
         </div>
 
-        {text && (
+        {text && !hideText && (
           <>
             <SyncedText
               text={text}
@@ -131,12 +132,13 @@ export function AudioPlayer({ text, audioPath, rate = 1, onRateChange, onProgres
   // 无音频文件或加载失败，使用 Text-to-Speech fallback
   return (
     <div className="space-y-4">
-      <div className="flex items-center gap-4 p-4 bg-gray-100 rounded-lg">
+      <div className="flex items-center gap-3 p-4 bg-gray-100 dark:bg-gray-800/50 rounded-lg">
         <div className="flex items-center gap-2">
-          <Volume2 className="w-5 h-5" />
+          <Volume2 className="w-5 h-5 text-gray-500 flex-shrink-0" />
           <Button
             size="sm"
             variant={isPlaying ? 'default' : 'outline'}
+            className="p-0 w-9 h-9"
             onClick={() => {
               if (isPlaying) {
                 pause()
@@ -150,6 +152,7 @@ export function AudioPlayer({ text, audioPath, rate = 1, onRateChange, onProgres
           <Button
             size="sm"
             variant="outline"
+            className="p-0 w-9 h-9"
             onClick={stop}
             disabled={!isPlaying}
           >
@@ -157,12 +160,12 @@ export function AudioPlayer({ text, audioPath, rate = 1, onRateChange, onProgres
           </Button>
         </div>
 
-        <div className="flex items-center gap-2">
-          <span className="text-sm text-gray-600">速度:</span>
+        <div className="flex items-center gap-1.5 ml-auto">
+          <span className="text-xs text-gray-500">速度</span>
           <select
             value={currentRate}
             onChange={(e) => handleRateChange(parseFloat(e.target.value))}
-            className="px-2 py-1 border rounded text-sm"
+            className="px-1.5 py-1.5 border rounded-lg text-xs bg-white dark:bg-gray-700 dark:border-gray-600"
           >
             <option value={0.5}>0.5x</option>
             <option value={0.75}>0.75x</option>
@@ -174,7 +177,7 @@ export function AudioPlayer({ text, audioPath, rate = 1, onRateChange, onProgres
         </div>
       </div>
 
-      {text && (
+      {text && !hideText && (
         <SyncedText
           text={text}
           progress={progress}

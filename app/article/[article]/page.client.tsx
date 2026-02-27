@@ -25,8 +25,10 @@ export function ArticleClient({ articleId }: { articleId: string }) {
   const [readingProgress, setReadingProgress] = useState(0)
   const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false)
   const [descriptionLang, setDescriptionLang] = useState<'cn' | 'en'>('cn')
+  const [isTextExpanded, setIsTextExpanded] = useState(false)
   const { speak, isPlaying, pause, stop, progress, isPaused } = useSpeechSynthesis({ rate })
-
+console.log(listeningProgress)
+console.log(readingProgress)
   useEffect(() => {
     const initialize = async () => {
       const currentLevels = useDataStore.getState().levels
@@ -51,20 +53,20 @@ export function ArticleClient({ articleId }: { articleId: string }) {
 
   if (isLoading) {
     return (
-      <div className="container mx-auto px-4 py-8 max-w-md text-center">
-        <div className="text-6xl mb-4">⏳</div>
-        <h2 className="text-2xl font-bold text-gray-800 mb-2">加载中...</h2>
+      <div className="container mx-auto px-4 py-8 max-w-md text-center safe-area-top min-h-screen bg-gradient-to-br from-blue-50/80 via-indigo-50/60 to-purple-50/50 dark:from-gray-900 dark:via-gray-800/60 dark:to-gray-900/50">
+        <div className="text-5xl sm:text-6xl mb-4">⏳</div>
+        <h2 className="text-xl sm:text-2xl font-bold text-gray-800 dark:text-gray-200 mb-2">加载中...</h2>
       </div>
     )
   }
 
   if (!article) {
     return (
-      <div className="container mx-auto px-4 py-8 max-w-md text-center">
-        <div className="text-6xl mb-4">😢</div>
-        <h2 className="text-2xl font-bold text-gray-800 mb-2">文章不存在</h2>
-        <p className="text-gray-600 mb-4">请选择一个有效的文章</p>
-        <Button onClick={() => window.location.href = '/'}>返回首页</Button>
+      <div className="container mx-auto px-4 py-8 max-w-md text-center safe-area-top min-h-screen bg-gradient-to-br from-blue-50/80 via-indigo-50/60 to-purple-50/50 dark:from-gray-900 dark:via-gray-800/60 dark:to-gray-900/50">
+        <div className="text-5xl sm:text-6xl mb-4">😢</div>
+        <h2 className="text-xl sm:text-2xl font-bold text-gray-800 dark:text-gray-200 mb-2">文章不存在</h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-4">请选择一个有效的文章</p>
+        <Button onClick={() => window.location.href = '/'} className="btn-mobile-safe">返回首页</Button>
       </div>
     )
   }
@@ -74,38 +76,54 @@ export function ArticleClient({ articleId }: { articleId: string }) {
     window.location.href = '/'
   }
 
-  const renderListeningMode = () => (
-    <div className="space-y-6">
-      <AudioPlayer audioPath={article.audioPath} text={article.english} rate={rate} onRateChange={setRate} onProgress={setListeningProgress} />
+  const FOLD_THRESHOLD = 5
+  const hasManysentences = article.sentences.length > FOLD_THRESHOLD
+  const visibleSentences = isTextExpanded ? article.sentences : article.sentences.slice(0, FOLD_THRESHOLD)
 
-      <Card>
-        <CardHeader>
-          <CardTitle>中文翻译</CardTitle>
+  const renderListeningMode = () => (
+    <div className="space-y-4 sm:space-y-6">
+      <Card className="shadow-soft border-0">
+        <CardContent className="p-4 sm:p-6">
+          <AudioPlayer audioPath={article.audioPath} text={article.english} hideText rate={rate} onRateChange={setRate} onProgress={setListeningProgress} />
+        </CardContent>
+      </Card>
+
+      <Card className="shadow-soft">
+        <CardHeader className="pb-3 sm:pb-4">
+          <CardTitle className="text-lg sm:text-xl">中文翻译</CardTitle>
         </CardHeader>
-        <CardContent>
-          <SyncedText
-            text={article.chinese}
-            progress={listeningProgress}
-            playedColor="text-purple-900"
-            unplayedColor="text-gray-600"
-            className="text-lg"
-          />
+        <CardContent className="pt-0">
+          <div className="space-y-3">
+            {visibleSentences.map((s, i) => (
+              <p key={i} className="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                {s.chinese}
+              </p>
+            ))}
+          </div>
+          {hasManysentences && (
+            <button
+              onClick={() => setIsTextExpanded(!isTextExpanded)}
+              className="mt-3 text-sm text-primary hover:text-primary/80 flex items-center gap-1 font-medium"
+            >
+              {isTextExpanded ? (<>收起 <ChevronUp className="w-4 h-4" /></>) : (<>展开全部 ({article.sentences.length}句) <ChevronDown className="w-4 h-4" /></>)}
+            </button>
+          )}
         </CardContent>
       </Card>
 
       {showEnglish && (
-        <Card>
-          <CardHeader>
-            <CardTitle>英文原文</CardTitle>
+        <Card className="shadow-soft">
+          <CardHeader className="pb-3 sm:pb-4">
+            <CardTitle className="text-lg sm:text-xl">英文原文</CardTitle>
           </CardHeader>
-          <CardContent>
-            <SyncedText
-              text={article.english}
-              progress={listeningProgress}
-              playedColor="text-purple-900"
-              unplayedColor="text-gray-600"
-              className="text-lg"
-            />
+          <CardContent className="pt-0">
+            <div className="space-y-3">
+              {visibleSentences.map((s, i) => (
+                <p key={i} className="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                  {s.english}
+                </p>
+              ))}
+            </div>
           </CardContent>
         </Card>
       )}
@@ -113,7 +131,7 @@ export function ArticleClient({ articleId }: { articleId: string }) {
       <Button
         variant="outline"
         onClick={() => setShowEnglish(!showEnglish)}
-        className="w-full"
+        className="w-full btn-mobile-safe"
       >
         {showEnglish ? '隐藏' : '显示'}英文
       </Button>
@@ -121,41 +139,54 @@ export function ArticleClient({ articleId }: { articleId: string }) {
   )
 
   const renderReadingMode = () => (
-    <div className="space-y-6">
-      <AudioPlayer text={article.english} rate={rate} onRateChange={setRate} onProgress={setReadingProgress} />
-
-      <Card>
-        <CardHeader>
-          <CardTitle>中文翻译</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <SyncedText
-            text={article.chinese}
-            progress={readingProgress}
-            playedColor="text-green-700"
-            unplayedColor="text-gray-500"
-            className="text-lg"
-          />
+    <div className="space-y-4 sm:space-y-6">
+      <Card className="shadow-soft border-0">
+        <CardContent className="p-4 sm:p-6">
+          <AudioPlayer text={article.english} hideText rate={rate} onRateChange={setRate} onProgress={setReadingProgress} />
         </CardContent>
       </Card>
 
-      <Card>
-        <CardHeader>
-          <CardTitle>词汇表</CardTitle>
+      <Card className="shadow-soft">
+        <CardHeader className="pb-3 sm:pb-4">
+          <CardTitle className="text-lg sm:text-xl">中英对照</CardTitle>
         </CardHeader>
-        <CardContent>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <CardContent className="pt-0">
+          <div className="space-y-4">
+            {visibleSentences.map((s, i) => (
+              <div key={i} className="pb-3 border-b border-gray-100 dark:border-gray-700/50 last:border-0 last:pb-0">
+                <p className="text-base sm:text-lg leading-relaxed text-foreground mb-1.5">{s.english}</p>
+                <p className="text-sm sm:text-base leading-relaxed text-gray-500 dark:text-gray-400">{s.chinese}</p>
+              </div>
+            ))}
+          </div>
+          {hasManysentences && (
+            <button
+              onClick={() => setIsTextExpanded(!isTextExpanded)}
+              className="mt-3 text-sm text-primary hover:text-primary/80 flex items-center gap-1 font-medium"
+            >
+              {isTextExpanded ? (<>收起 <ChevronUp className="w-4 h-4" /></>) : (<>展开全部 ({article.sentences.length}句) <ChevronDown className="w-4 h-4" /></>)}
+            </button>
+          )}
+        </CardContent>
+      </Card>
+
+      <Card className="shadow-soft">
+        <CardHeader className="pb-3 sm:pb-4">
+          <CardTitle className="text-lg sm:text-xl">词汇表</CardTitle>
+        </CardHeader>
+        <CardContent className="pt-0">
+          <div className="grid grid-cols-1 gap-3">
             {article.vocabulary.map((word, index) => (
-              <div key={index} className="bg-blue-50 p-4 rounded-lg flex flex-col">
+              <div key={index} className="bg-blue-50/80 dark:bg-blue-900/20 p-3 sm:p-4 rounded-lg border border-blue-100 dark:border-blue-800/30 flex flex-col">
                 <div className="flex justify-between items-start gap-2 mb-2">
-                  <div className="flex-1">
-                    <div className="font-semibold text-blue-900">{word.word}</div>
-                    <div className="text-sm text-blue-700">{word.phonetic}</div>
+                  <div className="flex-1 min-w-0">
+                    <div className="font-semibold text-blue-900 dark:text-blue-100 text-base sm:text-lg">{word.word}</div>
+                    <div className="text-sm text-blue-700 dark:text-blue-300">{word.phonetic}</div>
                   </div>
                   <Button
                     size="sm"
                     variant="ghost"
-                    className="h-8 w-8 p-0 flex-shrink-0 hover:bg-blue-100"
+                    className="h-9 w-9 p-0 flex-shrink-0 hover:bg-blue-100 dark:hover:bg-blue-800/50 btn-mobile-safe"
                     onClick={(e) => {
                       e.preventDefault()
                       e.stopPropagation()
@@ -163,11 +194,11 @@ export function ArticleClient({ articleId }: { articleId: string }) {
                     }}
                     title="播放发音"
                   >
-                    <Volume2 className="w-4 h-4" />
+                    <Volume2 className="w-4 h-4 sm:w-5 sm:h-5" />
                   </Button>
                 </div>
-                <div className="text-sm text-gray-700 mt-2 flex-1">{word.translation}</div>
-                <Badge className="mt-2 w-fit">{word.partOfSpeech}</Badge>
+                <div className="text-sm text-gray-700 dark:text-gray-300 mt-2 flex-1">{word.translation}</div>
+                <Badge className="mt-2 w-fit text-xs">{word.partOfSpeech}</Badge>
               </div>
             ))}
           </div>
@@ -177,34 +208,52 @@ export function ArticleClient({ articleId }: { articleId: string }) {
   )
 
   const renderMemoryMode = () => (
-    <div className="space-y-6">
-      <Card>
-        <CardHeader>
-          <CardTitle>记忆模式 ({currentSentenceIndex + 1}/{article.sentences.length})</CardTitle>
+    <div className="space-y-4 sm:space-y-6">
+      <Card className="shadow-soft">
+        <CardHeader className="pb-2 sm:pb-4">
+          <div className="flex items-center justify-between">
+            <CardTitle className="text-base sm:text-lg">记忆模式</CardTitle>
+            <span className="text-xs sm:text-sm text-muted-foreground font-medium">
+              {currentSentenceIndex + 1} / {article.sentences.length}
+            </span>
+          </div>
+          {/* 句子进度条 */}
+          <div className="flex gap-1 mt-2">
+            {article.sentences.map((_, i) => (
+              <div
+                key={i}
+                className={`h-1 flex-1 rounded-full transition-colors ${
+                  i === currentSentenceIndex
+                    ? 'bg-primary'
+                    : i < currentSentenceIndex
+                    ? 'bg-primary/30'
+                    : 'bg-gray-200 dark:bg-gray-700'
+                }`}
+              />
+            ))}
+          </div>
         </CardHeader>
-        <CardContent className="space-y-4">
-          <div className="bg-purple-50 p-6 rounded-lg">
+        <CardContent className="space-y-3 sm:space-y-4 pt-0">
+          <div className="bg-purple-50/80 dark:bg-purple-900/20 p-5 sm:p-8 rounded-xl border border-purple-100 dark:border-purple-800/30 min-h-[120px] sm:min-h-[160px] flex flex-col justify-center">
             <SyncedText
               text={article.sentences[currentSentenceIndex]?.english}
               progress={progress}
-              playedColor="text-purple-900"
-              unplayedColor="text-purple-300"
-              className="text-2xl font-semibold mb-4"
+              playedColor="text-primary"
+              unplayedColor="text-purple-800 dark:text-purple-300"
+              className="text-xl sm:text-3xl font-semibold leading-relaxed mb-4"
             />
-            <div className="flex gap-2">
+            <div className="flex gap-2 flex-wrap">
               <Button
                 size="sm"
                 variant={isPlaying && !isPaused ? 'default' : 'outline'}
                 onClick={() => {
                   if (isPlaying && !isPaused) {
                     pause()
-                  } else if (isPlaying && isPaused) {
-                    // Restart for now since Web Speech doesn't have true resume
-                    speak(article.sentences[currentSentenceIndex]?.english || '')
                   } else {
                     speak(article.sentences[currentSentenceIndex]?.english || '')
                   }
                 }}
+                className="btn-mobile-safe"
               >
                 {isPlaying && !isPaused ? <Pause className="w-4 h-4 mr-2" /> : <Play className="w-4 h-4 mr-2" />}
                 {isPlaying && !isPaused ? '暂停' : '播放'}
@@ -214,6 +263,7 @@ export function ArticleClient({ articleId }: { articleId: string }) {
                 variant="outline"
                 onClick={stop}
                 disabled={!isPlaying}
+                className="btn-mobile-safe"
               >
                 <Square className="w-4 h-4 mr-2" />
                 停止
@@ -222,22 +272,23 @@ export function ArticleClient({ articleId }: { articleId: string }) {
           </div>
 
           {showEnglish && (
-            <div className="bg-gray-50 p-4 rounded-lg">
+            <div className="bg-gray-50 dark:bg-gray-800/50 p-4 sm:p-5 rounded-xl border border-gray-100 dark:border-gray-700/30">
               <SyncedText
                 text={article.sentences[currentSentenceIndex]?.chinese}
                 progress={progress}
-                playedColor="text-purple-900"
-                unplayedColor="text-gray-600"
-                className="text-lg"
+                playedColor="text-primary"
+                unplayedColor="text-gray-600 dark:text-gray-400"
+                className="text-base sm:text-lg leading-relaxed"
               />
             </div>
           )}
 
-          <div className="flex gap-2">
+          <div className="grid grid-cols-2 gap-2">
             <Button
               variant="outline"
               onClick={() => setCurrentSentenceIndex(Math.max(0, currentSentenceIndex - 1))}
               disabled={currentSentenceIndex === 0}
+              className="btn-mobile-safe"
             >
               上一句
             </Button>
@@ -245,6 +296,7 @@ export function ArticleClient({ articleId }: { articleId: string }) {
               variant="outline"
               onClick={() => setCurrentSentenceIndex(Math.min(article.sentences.length - 1, currentSentenceIndex + 1))}
               disabled={currentSentenceIndex === article.sentences.length - 1}
+              className="btn-mobile-safe"
             >
               下一句
             </Button>
@@ -253,7 +305,7 @@ export function ArticleClient({ articleId }: { articleId: string }) {
           <Button
             variant="outline"
             onClick={() => setShowEnglish(!showEnglish)}
-            className="w-full"
+            className="w-full btn-mobile-safe"
           >
             {showEnglish ? '隐藏' : '显示'}翻译
           </Button>
@@ -263,121 +315,132 @@ export function ArticleClient({ articleId }: { articleId: string }) {
   )
 
   return (
-    <div className="container mx-auto px-4 py-8 max-w-4xl">
-      <button
-        className="flex items-center gap-2 text-purple-600 hover:text-purple-700 mb-6 transition-colors"
-        onClick={() => window.history.back()}
-      >
-        <ArrowLeft className="h-4 w-4" />
-        返回
-      </button>
-
-      <article className="bg-white rounded-lg shadow-lg p-8">
-        <h1 className="text-4xl font-bold mb-4 text-gray-800">{article.title}</h1>
-
-        {/* 难度等级 */}
-        <div className="flex items-center gap-2 mb-6">
-          <span className="text-sm text-gray-600 font-medium">难度等级：</span>
-          <div className="flex gap-0.5">
-            {Array.from({ length: article.difficulty }).map((_, i) => (
-              <span key={`filled-${i}`} className="text-yellow-500 text-lg">★</span>
-            ))}
-            {Array.from({ length: 5 - article.difficulty }).map((_, i) => (
-              <span key={`empty-${i}`} className="text-slate-300 text-lg">★</span>
-            ))}
-          </div>
-        </div>
-
-        {/* 描述切换和展开/收起 */}
-        <div className="mb-6">
-          {/* 语言切换按钮 */}
-          <div className="flex gap-2 mb-3">
-            <button
-              onClick={() => setDescriptionLang('cn')}
-              className={`px-3 py-1 text-sm rounded transition-colors ${
-                descriptionLang === 'cn'
-                  ? 'bg-purple-600 text-white'
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-              }`}
-            >
-              中文
-            </button>
-            <button
-              onClick={() => setDescriptionLang('en')}
-              className={`px-3 py-1 text-sm rounded transition-colors ${
-                descriptionLang === 'en'
-                  ? 'bg-purple-600 text-white'
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-              }`}
-              disabled={!article.descriptionEn}
-            >
-              英文
-            </button>
-          </div>
-
-          {/* 描述文本 */}
-          <p className={`text-gray-600 ${!isDescriptionExpanded ? 'line-clamp-2' : ''}`}>
-            {descriptionLang === 'cn' ? article.description : (article.descriptionEn || article.description)}
-          </p>
-
-          {/* 展开/收起按钮 */}
+    <div className="min-h-screen bg-gradient-to-br from-blue-50/80 via-indigo-50/60 to-purple-50/50 dark:from-gray-900 dark:via-gray-800/60 dark:to-gray-900/50">
+      <div className="container mx-auto px-4 py-6 sm:py-8 max-w-4xl safe-area-top">
+        {/* 浮动返回按钮 */}
+        <div className="sticky top-2 sm:top-4 z-10 mb-4 sm:mb-6">
           <button
-            onClick={() => setIsDescriptionExpanded(!isDescriptionExpanded)}
-            className="mt-2 text-sm text-purple-600 hover:text-purple-700 flex items-center gap-1 transition-colors font-medium"
+            className="tap-indicator flex items-center gap-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm px-3 py-2 rounded-full shadow-soft text-primary hover:text-primary-dark transition-colors"
+            onClick={() => window.history.back()}
           >
-            {isDescriptionExpanded ? (
-              <>
-                收起 <ChevronUp className="w-4 h-4" />
-              </>
-            ) : (
-              <>
-                展开 <ChevronDown className="w-4 h-4" />
-              </>
-            )}
+            <ArrowLeft className="h-4 w-4" />
+            返回
           </button>
         </div>
 
-        {/* 学习模式切换按钮 */}
-        <div className="flex gap-2 mb-8">
-          <Button
-            variant={mode === 'listening' ? 'default' : 'outline'}
-            onClick={() => setMode('listening')}
-            className="flex items-center gap-2"
-          >
-            <Volume2 className="w-4 h-4" />
-            听力模式
-          </Button>
-          <Button
-            variant={mode === 'reading' ? 'default' : 'outline'}
-            onClick={() => setMode('reading')}
-            className="flex items-center gap-2"
-          >
-            <Eye className="w-4 h-4" />
-            阅读模式
-          </Button>
-          <Button
-            variant={mode === 'memory' ? 'default' : 'outline'}
-            onClick={() => setMode('memory')}
-            className="flex items-center gap-2"
-          >
-            <Brain className="w-4 h-4" />
-            记忆模式
-          </Button>
-        </div>
+        {/* 文章内容卡片 */}
+        <article className="bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl shadow-medium p-4 sm:p-6 lg:p-8 animate-fade-in">
+          {/* 标题 */}
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-5 text-foreground">{article.title}</h1>
 
-        {mode === 'listening' && renderListeningMode()}
-        {mode === 'reading' && renderReadingMode()}
-        {mode === 'memory' && renderMemoryMode()}
+          {/* 难度等级 */}
+          <div className="flex items-center gap-2 mb-5 sm:mb-6">
+            <span className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 font-medium">难度等级：</span>
+            <div className="flex gap-0.5">
+              {Array.from({ length: article.difficulty }).map((_, i) => (
+                <span key={`filled-${i}`} className="text-yellow-500 text-sm sm:text-lg">★</span>
+              ))}
+              {Array.from({ length: 5 - article.difficulty }).map((_, i) => (
+                <span key={`empty-${i}`} className="text-slate-300 dark:text-slate-600 text-sm sm:text-lg">★</span>
+              ))}
+            </div>
+          </div>
 
-        <div className="flex gap-4 mt-8">
-          <Button onClick={handleComplete} className="flex-1">
-            标记为完成
-          </Button>
-          <Button variant="outline" onClick={() => window.history.back()}>
-            返回
-          </Button>
-        </div>
-      </article>
+          {/* 描述切换和展开/收起 */}
+          <div className="mb-5 sm:mb-6 pb-5 sm:pb-6 border-b border-gray-200 dark:border-gray-700">
+            {/* 语言切换按钮 */}
+            <div className="flex gap-2 mb-3">
+              <button
+                onClick={() => setDescriptionLang('cn')}
+                className={`tap-indicator px-3 py-1.5 text-sm rounded-lg transition-colors ${
+                  descriptionLang === 'cn'
+                    ? 'bg-primary text-white shadow-glow-sm'
+                    : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
+                }`}
+              >
+                中文
+              </button>
+              <button
+                onClick={() => setDescriptionLang('en')}
+                className={`tap-indicator px-3 py-1.5 text-sm rounded-lg transition-colors ${
+                  descriptionLang === 'en'
+                    ? 'bg-primary text-white shadow-glow-sm'
+                    : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
+                }`}
+                disabled={!article.descriptionEn}
+              >
+                英文
+              </button>
+            </div>
+
+            {/* 描述文本 */}
+            <p className={`text-sm sm:text-base text-gray-600 dark:text-gray-400 leading-relaxed ${!isDescriptionExpanded ? 'line-clamp-2' : ''}`}>
+              {descriptionLang === 'cn' ? article.description : (article.descriptionEn || article.description)}
+            </p>
+
+            {/* 展开/收起按钮 */}
+            <button
+              onClick={() => setIsDescriptionExpanded(!isDescriptionExpanded)}
+              className="mt-2 text-sm text-primary hover:text-primary-dark flex items-center gap-1 transition-colors font-medium"
+            >
+              {isDescriptionExpanded ? (
+                <>
+                  收起 <ChevronUp className="w-4 h-4" />
+                </>
+              ) : (
+                <>
+                  展开 <ChevronDown className="w-4 h-4" />
+                </>
+              )}
+            </button>
+          </div>
+
+          {/* 学习模式切换按钮 */}
+          <div className="grid grid-cols-3 gap-2 sm:flex sm:gap-3 mb-6 sm:mb-8">
+            <Button
+              variant={mode === 'listening' ? 'default' : 'outline'}
+              onClick={() => setMode('listening')}
+              className="flex items-center justify-center gap-1.5 sm:gap-2 btn-mobile-safe text-xs sm:text-sm"
+            >
+              <Volume2 className="w-4 h-4 flex-shrink-0" />
+              <span>听力</span>
+            </Button>
+            <Button
+              variant={mode === 'reading' ? 'default' : 'outline'}
+              onClick={() => setMode('reading')}
+              className="flex items-center justify-center gap-1.5 sm:gap-2 btn-mobile-safe text-xs sm:text-sm"
+            >
+              <Eye className="w-4 h-4 flex-shrink-0" />
+              <span>阅读</span>
+            </Button>
+            <Button
+              variant={mode === 'memory' ? 'default' : 'outline'}
+              onClick={() => setMode('memory')}
+              className="flex items-center justify-center gap-1.5 sm:gap-2 btn-mobile-safe text-xs sm:text-sm"
+            >
+              <Brain className="w-4 h-4 flex-shrink-0" />
+              <span>记忆</span>
+            </Button>
+          </div>
+
+          {/* 学习内容区域 */}
+          <div className="animate-slide-up">
+            {mode === 'listening' && renderListeningMode()}
+            {mode === 'reading' && renderReadingMode()}
+            {mode === 'memory' && renderMemoryMode()}
+          </div>
+
+          {/* 底部按钮 */}
+          <div className="flex gap-3 sm:gap-4 mt-6 sm:mt-8 pt-5 sm:pt-6 border-t border-gray-200 dark:border-gray-700">
+            <Button onClick={handleComplete} className="flex-1 btn-mobile-safe">
+              标记为完成
+            </Button>
+            <Button variant="outline" onClick={() => window.history.back()} className="btn-mobile-safe">
+              返回
+            </Button>
+          </div>
+        </article>
+      </div>
     </div>
   )
 }
