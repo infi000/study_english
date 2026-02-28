@@ -26,6 +26,7 @@ export function ArticleClient({ articleId }: { articleId: string }) {
   const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false)
   const [descriptionLang, setDescriptionLang] = useState<'cn' | 'en'>('cn')
   const [isTextExpanded, setIsTextExpanded] = useState(false)
+  const [currentParagraphIndex, setCurrentParagraphIndex] = useState(0)
   const { speak, isPlaying, pause, stop, progress, isPaused } = useSpeechSynthesis({ rate })
 console.log(listeningProgress)
 console.log(readingProgress)
@@ -80,11 +81,67 @@ console.log(readingProgress)
   const hasManysentences = article.sentences.length > FOLD_THRESHOLD
   const visibleSentences = isTextExpanded ? article.sentences : article.sentences.slice(0, FOLD_THRESHOLD)
 
-  const renderListeningMode = () => (
+  const renderListeningMode = () => {
+    const chineseParagraphs = article.chinese.split('\n\n').filter(p => p.trim())
+    const englishParagraphs = article.english.split('\n\n').filter(p => p.trim())
+    const totalParagraphs = chineseParagraphs.length
+
+    return (
     <div className="space-y-4 sm:space-y-6">
       <Card className="shadow-soft border-0">
         <CardContent className="p-4 sm:p-6">
           <AudioPlayer audioPath={article.audioPath} text={article.english} hideText rate={rate} onRateChange={setRate} onProgress={setListeningProgress} />
+        </CardContent>
+      </Card>
+
+      {/* 段落导航 */}
+      <Card className="shadow-soft">
+        <CardHeader className="pb-3">
+          <CardTitle className="text-base sm:text-lg">段落导航</CardTitle>
+        </CardHeader>
+        <CardContent className="pt-0">
+          <div className="flex flex-wrap gap-1.5">
+            {chineseParagraphs.map((para, idx) => {
+              const preview = para.slice(0, 20) + (para.length > 20 ? '...' : '')
+              return (
+                <button
+                  key={idx}
+                  onClick={() => setCurrentParagraphIndex(idx)}
+                  className={`px-2 py-1 text-xs rounded-md transition-colors text-left max-w-[120px] truncate ${
+                    idx === currentParagraphIndex
+                      ? 'bg-primary text-white'
+                      : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
+                  }`}
+                  title={para.slice(0, 50)}
+                >
+                  {idx + 1}. {preview}
+                </button>
+              )
+            })}
+          </div>
+          <div className="mt-3 flex justify-between items-center">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => setCurrentParagraphIndex(Math.max(0, currentParagraphIndex - 1))}
+              disabled={currentParagraphIndex === 0}
+              className="btn-mobile-safe"
+            >
+              上一段
+            </Button>
+            <span className="text-sm text-gray-600 dark:text-gray-400">
+              {currentParagraphIndex + 1} / {totalParagraphs}
+            </span>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => setCurrentParagraphIndex(Math.min(totalParagraphs - 1, currentParagraphIndex + 1))}
+              disabled={currentParagraphIndex >= totalParagraphs - 1}
+              className="btn-mobile-safe"
+            >
+              下一段
+            </Button>
+          </div>
         </CardContent>
       </Card>
 
@@ -94,20 +151,28 @@ console.log(readingProgress)
         </CardHeader>
         <CardContent className="pt-0">
           <div className="space-y-3">
-            {visibleSentences.map((s, i) => (
-              <p key={i} className="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
-                {s.chinese}
+            {isTextExpanded ? (
+              chineseParagraphs.map((para, i) => (
+                <p key={i} className="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                  {para}
+                </p>
+              ))
+            ) : (
+              <p className="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                {chineseParagraphs[currentParagraphIndex]}
               </p>
-            ))}
+            )}
           </div>
-          {hasManysentences && (
-            <button
-              onClick={() => setIsTextExpanded(!isTextExpanded)}
-              className="mt-3 text-sm text-primary hover:text-primary/80 flex items-center gap-1 font-medium"
-            >
-              {isTextExpanded ? (<>收起 <ChevronUp className="w-4 h-4" /></>) : (<>展开全部 ({article.sentences.length}句) <ChevronDown className="w-4 h-4" /></>)}
-            </button>
-          )}
+          <button
+            onClick={() => setIsTextExpanded(!isTextExpanded)}
+            className="mt-4 text-sm text-primary hover:text-primary/80 flex items-center gap-1 font-medium"
+          >
+            {isTextExpanded ? (
+              <>收起 <ChevronUp className="w-4 h-4" /></>
+            ) : (
+              <>展开全部 ({totalParagraphs}段) <ChevronDown className="w-4 h-4" /></>
+            )}
+          </button>
         </CardContent>
       </Card>
 
@@ -118,11 +183,17 @@ console.log(readingProgress)
           </CardHeader>
           <CardContent className="pt-0">
             <div className="space-y-3">
-              {visibleSentences.map((s, i) => (
-                <p key={i} className="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
-                  {s.english}
+              {isTextExpanded ? (
+                englishParagraphs.map((para, i) => (
+                  <p key={i} className="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                    {para}
+                  </p>
+                ))
+              ) : (
+                <p className="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                  {englishParagraphs[currentParagraphIndex]}
                 </p>
-              ))}
+              )}
             </div>
           </CardContent>
         </Card>
@@ -137,6 +208,7 @@ console.log(readingProgress)
       </Button>
     </div>
   )
+  }
 
   const renderReadingMode = () => (
     <div className="space-y-4 sm:space-y-6">
