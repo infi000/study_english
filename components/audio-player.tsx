@@ -4,6 +4,7 @@ import { useState, useRef } from 'react'
 import { Button } from '@/components/ui/button'
 import { useSpeechSynthesis } from '@/hooks/use-speech-synthesis'
 import { SyncedText } from '@/components/synced-text'
+import { VoiceSelector } from '@/components/voice-selector'
 import { Play, Pause, Square, Volume2 } from 'lucide-react'
 
 interface AudioPlayerProps {
@@ -82,7 +83,8 @@ export function AudioPlayer({ text, audioPath, rate = 1, hideText, onRateChange,
             controls
             className="flex-1 min-w-0 h-[36px]"
           />
-          <div className="flex items-center gap-1.5 flex-shrink-0">
+          <div className="flex items-center gap-3 flex-shrink-0">
+            <VoiceSelector onVoiceChange={() => {}} />
             <span className="text-xs text-gray-500">速度</span>
             <select
               value={currentRate}
@@ -160,7 +162,14 @@ export function AudioPlayer({ text, audioPath, rate = 1, hideText, onRateChange,
           </Button>
         </div>
 
-        <div className="flex items-center gap-1.5 ml-auto">
+        <div className="flex items-center gap-3 ml-auto">
+          <VoiceSelector onVoiceChange={(voiceName) => {
+            // 当语音改变时，如果正在播放，重新播放
+            if (isPlaying && text) {
+              stop()
+              setTimeout(() => speak(text), 100)
+            }
+          }} />
           <span className="text-xs text-gray-500">速度</span>
           <select
             value={currentRate}

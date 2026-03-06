@@ -6,8 +6,81 @@ interface UseSpeechSynthesisOptions {
   volume?: number
 }
 
+// 3个新闻主播风格的语音（按优先级排序）
+const VOICE_PREFERENCES = [
+  // 男美语（美国英语男声）
+  'Google US English',
+  'Microsoft David',
+  'Alex',
+  'Daniel',
+  // 男英语（英国英语男声）
+  'Google UK English Male',
+  'Microsoft Guy',
+  // 女英语（英国英语女声）
+  'Google UK English Female',
+  'Microsoft Zira',
+  'Samantha',
+  'Karen',
+  'Victoria',
+]
+
+// 存储选中语音的 localStorage key
+const SELECTED_VOICE_KEY = 'selected-voice-name'
+
 // 全局变量：确保预加载只发生一次
 let isPreloaded = false
+
+// 获取用户选择的语音
+function getUserSelectedVoice(): SpeechSynthesisVoice | null {
+  if (!('speechSynthesis' in window)) return null
+
+  const voices = window.speechSynthesis.getVoices()
+  const savedVoiceName =
+    typeof window !== 'undefined' ? localStorage.getItem(SELECTED_VOICE_KEY) : null
+
+  if (!savedVoiceName) return null
+
+  return voices.find((v) => v.name === savedVoiceName) || null
+}
+
+// 获取最佳语音
+function getBestVoice(): SpeechSynthesisVoice | null {
+  if (!('speechSynthesis' in window)) return null
+
+  const voices = window.speechSynthesis.getVoices()
+  if (voices.length === 0) return null
+
+  // 优先使用用户选择的语音
+  const userSelected = getUserSelectedVoice()
+  if (userSelected) {
+    return userSelected
+  }
+
+  // 优先选择英语语音
+  const englishVoices = voices.filter(
+    (voice) => voice.lang.startsWith('en-') && voice.localService
+  )
+
+  if (englishVoices.length === 0) {
+    // 如果没有本地英语语音，回退到任意英语语音
+    const anyEnglishVoices = voices.filter((voice) => voice.lang.startsWith('en-'))
+    if (anyEnglishVoices.length > 0) {
+      return anyEnglishVoices[0]
+    }
+    return voices[0]
+  }
+
+  // 按照偏好列表排序
+  for (const prefName of VOICE_PREFERENCES) {
+    const voice = englishVoices.find((v) => v.name === prefName)
+    if (voice) {
+      return voice
+    }
+  }
+
+  // 如果没有匹配的偏好语音，选择第一个英语语音
+  return englishVoices[0]
+}
 
 // 预加载 Speech Synthesis API
 function preloadSpeechSynthesis() {
@@ -15,6 +88,14 @@ function preloadSpeechSynthesis() {
   if (!('speechSynthesis' in window)) return
 
   isPreloaded = true
+
+  // 加载语音列表
+  window.speechSynthesis.getVoices()
+
+  // 监听语音列表加载完成事件
+  window.speechSynthesis.onvoiceschanged = () => {
+    window.speechSynthesis.getVoices()
+  }
 
   // 创建一个空的 utterance 来触发 API 初始化
   const utterance = new SpeechSynthesisUtterance('')
@@ -29,7 +110,7 @@ function preloadSpeechSynthesis() {
 }
 
 export function useSpeechSynthesis(options: UseSpeechSynthesisOptions = {}) {
-  const { rate = 1, pitch = 1, volume = 1 } = options
+  const { rate = 1, pitch = 0.95, volume = 1 } = options
   const [isPlaying, setIsPlaying] = useState(false)
   const [isPaused, setIsPaused] = useState(false)
   const [elapsedTime, setElapsedTime] = useState(0)
@@ -63,15 +144,17 @@ export function useSpeechSynthesis(options: UseSpeechSynthesisOptions = {}) {
       setEstimatedDuration(duration)
 
       const utterance = new SpeechSynthesisUtterance(text)
+      // 优化参数以获得更自然的语音
       utterance.rate = rate
-      utterance.pitch = pitch
+      utterance.pitch = pitch // 稍微降低音调让声音更自然
       utterance.volume = volume
       utterance.lang = 'en-US'
 
-      // 显式设置语音
-      const voices = window.speechSynthesis.getVoices()
-      if (voices.length > 0) {
-        utterance.voice = voices[0]
+      // 获取并使用最佳语音
+      const bestVoice = getBestVoice()
+      if (bestVoice) {
+        utterance.voice = bestVoice
+        utterance.lang = bestVoice.lang
       }
 
       utterance.onstart = () => {
